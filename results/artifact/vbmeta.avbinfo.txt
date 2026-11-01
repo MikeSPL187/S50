@@ -1,0 +1,127 @@
+Minimum libavb version:   1.0
+Header Block:             256 bytes
+Authentication Block:     320 bytes
+Auxiliary Block:          5440 bytes
+Public key (sha1):        83577fb9ae17c886e05249ea82786ee935a6c69b
+Algorithm:                SHA256_RSA2048
+Rollback Index:           27
+Flags:                    0
+Rollback Index Location:  0
+Release String:           'avbtool 1.3.0'
+Descriptors:
+    Prop: KERN_PROT_META -> 'rodata_bounds:65536,17039360,29229056'
+    Prop: HAB_META -> 'vienna_50'
+    Prop: com.android.build.boot.os_version -> '14'
+    Prop: com.android.build.boot.fingerprint -> 'motorola/vienna_g_hal/vienna:14/W1UI36H.39-25-11-4/2734cd:user/release-keys'
+    Prop: com.android.build.boot.security_patch -> '2026-09-01'
+    Prop: com.android.build.boot.security_patch -> '2026-09-01'
+    Prop: com.android.build.dtbo.fingerprint -> 'motorola/vienna_g_vext/vienna:14/W1UI36H.39-25-11-4/2734cd:user/release-keys'
+    Prop: com.android.build.init_boot.os_version -> '14'
+    Prop: com.android.build.init_boot.fingerprint -> 'motorola/vienna_g_hal/vienna:14/W1UI36H.39-25-11-4/2734cd:user/release-keys'
+    Prop: com.android.build.init_boot.security_patch -> '2026-09-01'
+    Prop: com.android.build.product.os_version -> '16'
+    Prop: com.android.build.product.fingerprint -> 'motorola/vienna_g_sys/vienna:16/W1UI36M.39-25-11-4/58da6:user/release-keys'
+    Prop: com.android.build.product.security_patch -> '2026-09-01'
+    Prop: com.android.build.system_dlkm.os_version -> '14'
+    Prop: com.android.build.system_dlkm.fingerprint -> 'motorola/vienna_g_hal/vienna:14/W1UI36H.39-25-11-4/2734cd:user/release-keys'
+    Prop: com.android.build.vendor.os_version -> '14'
+    Prop: com.android.build.vendor.fingerprint -> 'motorola/vienna_g_hal/vienna:14/W1UI36H.39-25-11-4/2734cd:user/release-keys'
+    Prop: com.android.build.vendor.security_patch -> '2026-09-01'
+    Prop: com.android.build.vendor.security_patch -> '2026-09-01'
+    Prop: com.android.build.vendor_boot.fingerprint -> 'motorola/vienna_g_hal/vienna:14/W1UI36H.39-25-11-4/2734cd:user/release-keys'
+    Prop: com.android.build.vendor_dlkm.os_version -> '14'
+    Prop: com.android.build.vendor_dlkm.fingerprint -> 'motorola/vienna_g_hal/vienna:14/W1UI36H.39-25-11-4/2734cd:user/release-keys'
+    Prop: com.android.build.vendor_dlkm.os_version -> '14'
+    Chain Partition descriptor:
+      Partition Name:          vbmeta_system
+      Rollback Index Location: 2
+      Public key (sha1):       fd29248b78aa9d6427e8f569eda90be62b9fa0ee
+      Flags:                   0
+    Hash descriptor:
+      Image Size:            14131200 bytes
+      Hash Algorithm:        sha256
+      Partition Name:        boot
+      Salt:                  cf0de7380c317db223e834df07f04d683d87b4c1a314d5a6742f7c5349c04c6d
+      Digest:                61600ee89b0f26c8ebdfbb25ac88d82d0c386f2cdbf0748163c9928d02772078
+      Flags:                 0
+    Hash descriptor:
+      Image Size:            292960 bytes
+      Hash Algorithm:        sha256
+      Partition Name:        dtbo
+      Salt:                  98c4d9821601b82bb32fd21e30f4338d10a97d83708607615c151939663e27d2
+      Digest:                599bf4015b72a4ae2b730898d40ff569dd211bbb1a92f7641e77ba0b324748f4
+      Flags:                 0
+    Hash descriptor:
+      Image Size:            3096576 bytes
+      Hash Algorithm:        sha256
+      Partition Name:        init_boot
+      Salt:                  025a2f470c8950de20c615ed6e5d12ead18cc454b87bd03187c6dd984e39ccfc
+      Digest:                a8182c80a1c00d1ab4df65f5de1fc717cb3adaa6c596844cca60e619ee6f6fd4
+      Flags:                 0
+    Hash descriptor:
+      Image Size:            35561472 bytes
+      Hash Algorithm:        sha256
+      Partition Name:        vendor_boot
+      Salt:                  025a2f470c8950de20c615ed6e5d12ead18cc454b87bd03187c6dd984e39ccfc
+      Digest:                cf3e873ccd5bb3e554b7937dd493e9361a584c06ae278aedf9906cbcd687f09b
+      Flags:                 0
+    Hashtree descriptor:
+      Version of dm-verity:  1
+      Image Size:            4530696192 bytes
+      Tree Offset:           4530696192
+      Tree Size:             35680256 bytes
+      Data Block Size:       4096 bytes
+      Hash Block Size:       4096 bytes
+      FEC num roots:         2
+      FEC offset:            4566376448
+      FEC size:              36102144 bytes
+      Hash Algorithm:        sha256
+      Partition Name:        product
+      Salt:                  86dd001b1093e8c18f198a8a3daa5afb80dac258f6862c6f3ab4cc0707eb10b9
+      Root Digest:           177969e292d8e4aee759e0e1038beccec0385db6856e03059476ffcee8e9ea13
+      Flags:                 0
+    Hashtree descriptor:
+      Version of dm-verity:  1
+      Image Size:            7262208 bytes
+      Tree Offset:           7262208
+      Tree Size:             61440 bytes
+      Data Block Size:       4096 bytes
+      Hash Block Size:       4096 bytes
+      FEC num roots:         2
+      FEC offset:            7323648
+      FEC size:              65536 bytes
+      Hash Algorithm:        sha256
+      Partition Name:        system_dlkm
+      Salt:                  3a50888340a697074994b85539b7565d1bc18d7668caffba6bffd6fd1ccb7db2
+      Root Digest:           d6b6651dd0eab1012a1c8248b468e2f94bbf30ecef3aab6b0b7fa6beff398ce0
+      Flags:                 0
+    Hashtree descriptor:
+      Version of dm-verity:  1
+      Image Size:            1653211136 bytes
+      Tree Offset:           1653211136
+      Tree Size:             13025280 bytes
+      Data Block Size:       4096 bytes
+      Hash Block Size:       4096 bytes
+      FEC num roots:         2
+      FEC offset:            1666236416
+      FEC size:              13172736 bytes
+      Hash Algorithm:        sha256
+      Partition Name:        vendor
+      Salt:                  78e2b684afb7a6b8d615a6252fbfd672d3e9b0cfae27a79b3de0605d44f94843
+      Root Digest:           e99b1cf6f0a032505654c656ca01a456b410ed46377b090adfb500e0d07334ba
+      Flags:                 0
+    Hashtree descriptor:
+      Version of dm-verity:  1
+      Image Size:            17670144 bytes
+      Tree Offset:           17670144
+      Tree Size:             143360 bytes
+      Data Block Size:       4096 bytes
+      Hash Block Size:       4096 bytes
+      FEC num roots:         0
+      FEC offset:            0
+      FEC size:              0 bytes
+      Hash Algorithm:        sha256
+      Partition Name:        vendor_dlkm
+      Salt:                  3a30e0f24a07162f290ab8fbe298ac4978dae354fbfef26b54c1e707f4b1946a
+      Root Digest:           95e631209bc2ce5a0e1ff9672a070fda7f2ffb4bf775b92a5b4596324ba92b95
+      Flags:                 0

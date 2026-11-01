@@ -1,0 +1,73 @@
+# Reproducibility of MTK scheduler modules (W1UI36H.39-25-11-4)
+# stock binary  : vendor_dlkm_a/lib/modules/<m>.ko from VIENNA_G_SYS_W1UI36H.39-25-11-4 (7z sha256 6bc78abc...f6a3)
+# rebuilt       : kernel-kernel_device_modules-6.1 @ MMI-W1UI36H.39-25-11-4 (700ad8d4), kernel-mtk @ 19769679, clang r487747c, llvm-strip --strip-debug
+
+## 1. Unmodified source rebuild vs stock binary
+[scheduler.ko] exports: stock=149 rebuilt=149 crc_mismatch=0 missing=0 extra=0
+[scheduler.ko] imports: stock=293 rebuilt=293 crc_mismatch=0 dropped=0 new=0
+[scheduler.ko] params: added=[] (as expected)
+[scheduler.ko] section sizes (stock -> rebuilt):
+   .bss                  1217 ->      1217  (+0)
+   .data                57264 ->     57264  (+0)
+   .exit.text             156 ->       156  (+0)
+   .init.text            1600 ->      1600  (+0)
+   .modinfo               286 ->       286  (+0)
+   .rodata               1656 ->      1656  (+0)
+   .rodata.str1.1       15918 ->     15918  (+0)
+   .text               171448 ->    171448  (+0)
+   __tracepoints         5184 ->      5184  (+0)
+   __versions           18752 ->     18752  (+0)
+[scheduler.ko] RESULT: PASS
+[cpufreq_sugov_ext.ko] exports: stock=112 rebuilt=112 crc_mismatch=0 missing=0 extra=0
+[cpufreq_sugov_ext.ko] imports: stock=120 rebuilt=120 crc_mismatch=0 dropped=0 new=0
+[cpufreq_sugov_ext.ko] params: added=[] (as expected)
+[cpufreq_sugov_ext.ko] section sizes (stock -> rebuilt):
+   .bss                  1301 ->      1301  (+0)
+   .data                 6656 ->      6656  (+0)
+   .exit.text              44 ->        44  (+0)
+   .init.text             336 ->       336  (+0)
+   .modinfo               279 ->       279  (+0)
+   .rodata                456 ->       456  (+0)
+   .rodata.str1.1        4458 ->      4458  (+0)
+   .text                48660 ->     48660  (+0)
+   __tracepoints          792 ->       792  (+0)
+   __versions            7680 ->      7680  (+0)
+[cpufreq_sugov_ext.ko] RESULT: PASS
+[mtk_core_ctl.ko] exports: stock=21 rebuilt=21 crc_mismatch=0 missing=0 extra=0
+[mtk_core_ctl.ko] imports: stock=108 rebuilt=108 crc_mismatch=0 dropped=0 new=0
+[mtk_core_ctl.ko] params: added=[] (as expected)
+[mtk_core_ctl.ko] section sizes (stock -> rebuilt):
+   .bss                   852 ->       852  (+0)
+   .data                 3544 ->      3544  (+0)
+   .exit.text              72 ->        72  (+0)
+   .init.text            3604 ->      3604  (+0)
+   .modinfo               397 ->       397  (+0)
+   .rodata                240 ->       240  (+0)
+   .rodata.str1.1        3543 ->      3543  (+0)
+   .text                25352 ->     25352  (+0)
+   __param                160 ->       160  (+0)
+   __tracepoints          288 ->       288  (+0)
+   __versions            6912 ->      6912  (+0)
+[mtk_core_ctl.ko] RESULT: PASS
+
+scheduler.ko: file size stock=833888 rebuilt=833888; sections=70; byte-differing sections=['.note.gnu.build-id']
+cpufreq_sugov_ext.ko: file size stock=251344 rebuilt=251344; sections=65; byte-differing sections=['.note.gnu.build-id']
+mtk_core_ctl.ko: file size stock=147376 rebuilt=147376; sections=68; byte-differing sections=['.note.gnu.build-id']
+
+## 2. Patched build vs stock binary
+[cpufreq_sugov_ext.ko] exports: stock=112 rebuilt=112 crc_mismatch=0 missing=0 extra=0
+[cpufreq_sugov_ext.ko] imports: stock=120 rebuilt=121 crc_mismatch=0 dropped=0 new=0
+[cpufreq_sugov_ext.ko] params: added=['iowait_boost_enable', 'rl_bypass_on_limits'] (as expected)
+[cpufreq_sugov_ext.ko] section sizes (stock -> rebuilt):
+   .bss                  1301 ->      1301  (+0)
+   .data                 6656 ->      6664  (+8)
+   .exit.text              44 ->        44  (+0)
+   .init.text             336 ->       336  (+0)
+   .modinfo               279 ->       577  (+298)
+   .rodata                456 ->       496  (+40)
+   .rodata.str1.1        4458 ->      4458  (+0)
+   .text                48660 ->     48776  (+116)
+   __param                  0 ->        80  (+80)
+   __tracepoints          792 ->       792  (+0)
+   __versions            7680 ->      7744  (+64)
+[cpufreq_sugov_ext.ko] RESULT: PASS

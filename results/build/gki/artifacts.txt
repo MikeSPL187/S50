@@ -1,0 +1,5 @@
+kernelrelease: 6.1.157-android14-11-g14047afecd8b-ab16012876
+Linux version 6.1.157-android14-11-g14047afecd8b-ab16012876 (build-user@build-host) (Android (10087095, +pgo, +bolt, +lto, -mlgo, based on r487747c) clang version 17.0.2 (https://android.googlesource.com/toolchain/llvm-project d9f89f4d16663d5012e5c09495f3b30ece3d2362), LLD 17.0.2) #1 SMP PREEMPT Tue Aug  4 11:44:32 UTC 2026
+e77ed93b303d8338273a2c31f5ecb624d8439aa23560f7628d81e843e5570a58  /work/out/gki/arch/arm64/boot/Image
+c1cb2535b030b62011aa9fc77220600e5870d7191b8ab2b4071d18df18b0aedc  /work/out/gki/vmlinux.symvers
+c52916a02b7bca7d6512cbdd7b60788733031f0242c12c681ccbb0ee52251f03  /work/out/gki/Module.symvers

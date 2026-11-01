@@ -1,0 +1,1 @@
+partition_size=18092032 image_size=17670144

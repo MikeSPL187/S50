@@ -1,0 +1,69 @@
+From 71d46e2a8fea7b3f0593ac4006de6fd22d1fd0de Mon Sep 17 00:00:00 2001
+From: S50 kernel project <xfopjl@outlook.com>
+Date: Sun, 1 Nov 2026 15:16:41 +0000
+Subject: [PATCH 2/2] sched: sugov_ext: add runtime switch for iowait boosting
+ (default: stock)
+
+Problem
+  sugov_ext inherited the upstream schedutil iowait boost: every wakeup
+  from IO wait boosts the CPU utilization, doubling on each successive
+  wakeup within a tick up to the maximum OPP.  On a phone with UFS
+  storage this can raise frequency for IO-bound background work (sync,
+  installs, media scanning) where the CPU is not the bottleneck.
+  Whether that costs measurable energy on this device, or whether it
+  helps foreground IO latency, is unknown and has to be measured.
+  PowerHAL already has a dedicated PERF_RES_IO_DATA_FS_BOOST resource.
+
+Change
+  Add module parameter iowait_boost_enable (default Y = unchanged stock
+  behaviour).  When N, the per-CPU iowait boost state is cleared so that
+  sugov_iowait_apply() adds nothing.  No structure layout, exported
+  symbol or prototype changes.
+
+Verification (A/B on the same image, root):
+  echo N > /sys/module/cpufreq_sugov_ext/parameters/iowait_boost_enable
+  Compare: app cold start (am start -W), fio/dd sequential and random IO,
+  frame stats during scrolling, energy (batterystats / charge counter)
+  for an IO-heavy workload, cpu_frequency residency in Perfetto.
+
+Rollback
+  echo Y > /sys/module/cpufreq_sugov_ext/parameters/iowait_boost_enable
+  (default after every boot) or restore the stock vendor_dlkm image.
+---
+ .../mediatek/sched/sugov/cpufreq_sugov_main.c   | 17 +++++++++++++++++
+ 1 file changed, 17 insertions(+)
+
+diff --git a/drivers/misc/mediatek/sched/sugov/cpufreq_sugov_main.c b/drivers/misc/mediatek/sched/sugov/cpufreq_sugov_main.c
+index 6fd8c07..512f1ef 100644
+--- a/drivers/misc/mediatek/sched/sugov/cpufreq_sugov_main.c
++++ b/drivers/misc/mediatek/sched/sugov/cpufreq_sugov_main.c
+@@ -577,12 +577,29 @@ static bool sugov_iowait_reset(struct sugov_cpu *sg_cpu, u64 time,
+  *
+  * To keep doubling, an IO boost has to be requested at least once per tick,
+  * otherwise we restart from the utilization of the minimum OPP.
++ *
++ * iowait_boost_enable=N turns the mechanism off (the boost state is cleared,
++ * so sugov_iowait_apply() becomes a no-op).  The default keeps the stock
++ * behaviour; the switch exists so that the energy/latency trade-off of
++ * iowait boosting can be measured on this device (UFS storage, PowerHAL
++ * already has an explicit PERF_RES_IO_DATA_FS_BOOST resource).
+  */
++static bool sugov_iowait_boost_enable = true;
++module_param_named(iowait_boost_enable, sugov_iowait_boost_enable, bool, 0644);
++MODULE_PARM_DESC(iowait_boost_enable,
++		 "Boost frequency for tasks waking up from IO wait (default: Y = stock)");
++
+ static void sugov_iowait_boost(struct sugov_cpu *sg_cpu, u64 time,
+ 			       unsigned int flags)
+ {
+ 	bool set_iowait_boost = flags & SCHED_CPUFREQ_IOWAIT;
+ 
++	if (unlikely(!READ_ONCE(sugov_iowait_boost_enable))) {
++		sg_cpu->iowait_boost = 0;
++		sg_cpu->iowait_boost_pending = false;
++		return;
++	}
++
+ 	/* Reset boost if the CPU appears to have been idle enough */
+ 	if (sg_cpu->iowait_boost &&
+ 	    sugov_iowait_reset(sg_cpu, time, set_iowait_boost))

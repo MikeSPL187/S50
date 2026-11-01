@@ -1,0 +1,14 @@
+{
+ "modules_checked": 498,
+ "modules_replaced_by_candidate": [
+  "cpufreq_sugov_ext.ko"
+ ],
+ "crc_mismatches": 0,
+ "unresolved_symbols": 0,
+ "vermagic_mismatches": 0,
+ "vermagic_values": {
+  "6.1.157-android14-11-g14047afecd8b-ab16012876 SMP preempt mod_unload modversions aarch64": 59,
+  "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64": 439
+ }
+}
+KMI GATE: PASS

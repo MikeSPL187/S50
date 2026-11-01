@@ -1,0 +1,6 @@
+== 0001-sched-sugov_ext-apply-limit-changes-before-direction.patch (checkpatch --strict --no-signoff)
+WARNING: Prefer a maximum 75 chars per line (possible unwrapped commit description?)
+#23: 
+total: 0 errors, 1 warnings, 0 checks, 41 lines checked
+== 0002-sched-sugov_ext-add-runtime-switch-for-iowait-boosti.patch (checkpatch --strict --no-signoff)
+total: 0 errors, 0 warnings, 0 checks, 29 lines checked

@@ -1,0 +1,3005 @@
+{
+ "modules": {
+  "6lowpan.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/system_dlkm_a/lib/modules/6lowpan.ko",
+   "vermagic": "6.1.157-android14-11-g14047afecd8b-ab16012876 SMP preempt mod_unload modversions aarch64"
+  },
+  "8021q.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/system_dlkm_a/lib/modules/8021q.ko",
+   "vermagic": "6.1.157-android14-11-g14047afecd8b-ab16012876 SMP preempt mod_unload modversions aarch64"
+  },
+  "8250_mtk.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/8250_mtk.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "adapter_class.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/adapter_class.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "adsp.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/adsp.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "aee_aed.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/aee_aed.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "aee_hangdet.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/aee_hangdet.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "aee_rs.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/aee_rs.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "anc_fps_mmi.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/anc_fps_mmi.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "apu_top.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/apu_top.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "apusys.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/apusys.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "aqc111.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/system_dlkm_a/lib/modules/aqc111.ko",
+   "vermagic": "6.1.157-android14-11-g14047afecd8b-ab16012876 SMP preempt mod_unload modversions aarch64"
+  },
+  "arm_dsu_pmu.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/arm_dsu_pmu.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "asix.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/system_dlkm_a/lib/modules/asix.ko",
+   "vermagic": "6.1.157-android14-11-g14047afecd8b-ab16012876 SMP preempt mod_unload modversions aarch64"
+  },
+  "atf_logger.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/atf_logger.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "audio_ipi.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/audio_ipi.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "awinic_sar.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/awinic_sar.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "ax88179_178a.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/system_dlkm_a/lib/modules/ax88179_178a.ko",
+   "vermagic": "6.1.157-android14-11-g14047afecd8b-ab16012876 SMP preempt mod_unload modversions aarch64"
+  },
+  "backlight_cooling.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/backlight_cooling.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "blocktag.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/blocktag.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "bluetooth.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/bluetooth.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "board_temp.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/board_temp.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "bootprof.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/bootprof.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "bq25980_mmi.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/bq25980_mmi.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "bsd_comp.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/system_dlkm_a/lib/modules/bsd_comp.ko",
+   "vermagic": "6.1.157-android14-11-g14047afecd8b-ab16012876 SMP preempt mod_unload modversions aarch64"
+  },
+  "bt_drv_6878.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/bt_drv_6878.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "btbcm.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/system_dlkm_a/lib/modules/btbcm.ko",
+   "vermagic": "6.1.157-android14-11-g14047afecd8b-ab16012876 SMP preempt mod_unload modversions aarch64"
+  },
+  "btqca.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/system_dlkm_a/lib/modules/btqca.ko",
+   "vermagic": "6.1.157-android14-11-g14047afecd8b-ab16012876 SMP preempt mod_unload modversions aarch64"
+  },
+  "btsdio.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/system_dlkm_a/lib/modules/btsdio.ko",
+   "vermagic": "6.1.157-android14-11-g14047afecd8b-ab16012876 SMP preempt mod_unload modversions aarch64"
+  },
+  "bus-parity.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/bus-parity.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "c2k_usb.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/c2k_usb.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "c2k_usb_f_via_atc.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/c2k_usb_f_via_atc.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "c2k_usb_f_via_ets.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/c2k_usb_f_via_ets.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "c2k_usb_f_via_modem.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/c2k_usb_f_via_modem.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "c2ps_perf_ioctl.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/c2ps_perf_ioctl.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "cache-parity.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/cache-parity.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "camera_af_media.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/camera_af_media.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "camera_dpe_isp7sp.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/camera_dpe_isp7sp.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "camera_eeprom_v4l2.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/camera_eeprom_v4l2.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "can-bcm.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/system_dlkm_a/lib/modules/can-bcm.ko",
+   "vermagic": "6.1.157-android14-11-g14047afecd8b-ab16012876 SMP preempt mod_unload modversions aarch64"
+  },
+  "can-dev.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/system_dlkm_a/lib/modules/can-dev.ko",
+   "vermagic": "6.1.157-android14-11-g14047afecd8b-ab16012876 SMP preempt mod_unload modversions aarch64"
+  },
+  "can-gw.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/system_dlkm_a/lib/modules/can-gw.ko",
+   "vermagic": "6.1.157-android14-11-g14047afecd8b-ab16012876 SMP preempt mod_unload modversions aarch64"
+  },
+  "can-raw.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/system_dlkm_a/lib/modules/can-raw.ko",
+   "vermagic": "6.1.157-android14-11-g14047afecd8b-ab16012876 SMP preempt mod_unload modversions aarch64"
+  },
+  "can.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/system_dlkm_a/lib/modules/can.ko",
+   "vermagic": "6.1.157-android14-11-g14047afecd8b-ab16012876 SMP preempt mod_unload modversions aarch64"
+  },
+  "ccci_auxadc.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/ccci_auxadc.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "ccci_ccif.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/ccci_ccif.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "ccci_dpmaif.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/ccci_dpmaif.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "ccci_fsm_scp.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/ccci_fsm_scp.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "ccci_md_all.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/ccci_md_all.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "ccci_util_lib.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/ccci_util_lib.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "ccd_rpmsg.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/ccd_rpmsg.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "ccmni.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/ccmni.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "cdc-acm.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/system_dlkm_a/lib/modules/cdc-acm.ko",
+   "vermagic": "6.1.157-android14-11-g14047afecd8b-ab16012876 SMP preempt mod_unload modversions aarch64"
+  },
+  "cdc_eem.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/system_dlkm_a/lib/modules/cdc_eem.ko",
+   "vermagic": "6.1.157-android14-11-g14047afecd8b-ab16012876 SMP preempt mod_unload modversions aarch64"
+  },
+  "cdc_ether.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/system_dlkm_a/lib/modules/cdc_ether.ko",
+   "vermagic": "6.1.157-android14-11-g14047afecd8b-ab16012876 SMP preempt mod_unload modversions aarch64"
+  },
+  "cdc_ncm.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/system_dlkm_a/lib/modules/cdc_ncm.ko",
+   "vermagic": "6.1.157-android14-11-g14047afecd8b-ab16012876 SMP preempt mod_unload modversions aarch64"
+  },
+  "cfg80211.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/cfg80211.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "charger_class.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/charger_class.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "charger_cooling.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/charger_cooling.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "clk-bringup.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/clk-bringup.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "clk-chk-mt6878.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/clk-chk-mt6878.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "clk-common.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/clk-common.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "clk-dbg-mt6878.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/clk-dbg-mt6878.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "clk-disable-unused.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/clk-disable-unused.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "clk-fmeter-mt6878.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/clk-fmeter-mt6878.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "clk-mt6878-adsp.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/clk-mt6878-adsp.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "clk-mt6878-bus.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/clk-mt6878-bus.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "clk-mt6878-cam.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/clk-mt6878-cam.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "clk-mt6878-ccu.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/clk-mt6878-ccu.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "clk-mt6878-img.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/clk-mt6878-img.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "clk-mt6878-mdpsys.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/clk-mt6878-mdpsys.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "clk-mt6878-mmsys.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/clk-mt6878-mmsys.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "clk-mt6878-peri.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/clk-mt6878-peri.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "clk-mt6878-vcodec.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/clk-mt6878-vcodec.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "clk-mt6878-vlp.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/clk-mt6878-vlp.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "clk-mt6878.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/clk-mt6878.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "clkbuf.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/clkbuf.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "cmdq-platform-mt6878.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/cmdq-platform-mt6878.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "cmdq-sec-drv.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/cmdq-sec-drv.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "cmdq-test.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/cmdq-test.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "cmdq_helper_inf.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/cmdq_helper_inf.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "con_dfpar.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/con_dfpar.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "connadp.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/connadp.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "connfem.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/connfem.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "conninfra.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/conninfra.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "connscp.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/connscp.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "cps4038_mmi.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/cps4038_mmi.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "cpudvfs.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/cpudvfs.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "cpufreq_sugov_ext.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/out/candidate/cpufreq_sugov_ext.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "cpuqos_v3.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/cpuqos_v3.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "cqhci.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/cqhci.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "dbg_error_flag.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/dbg_error_flag.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "dbgtop-drm.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/dbgtop-drm.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "device-apc-common.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/device-apc-common.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "device-apc-mt6878.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/device-apc-mt6878.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "diag.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/system_dlkm_a/lib/modules/diag.ko",
+   "vermagic": "6.1.157-android14-11-g14047afecd8b-ab16012876 SMP preempt mod_unload modversions aarch64"
+  },
+  "drm_display_helper.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/drm_display_helper.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "drm_dma_helper.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/drm_dma_helper.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "dsi-panel-mot-csot-vtdr6130-636-fhdp-dphy-cmd-120hz.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/dsi-panel-mot-csot-vtdr6130-636-fhdp-dphy-cmd-120hz.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "dsi-panel-mot-dummy-cmd-60hz.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/dsi-panel-mot-dummy-cmd-60hz.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "dsi-panel-mot-dummy-vdo-60hz.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/dsi-panel-mot-dummy-vdo-60hz.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "dsi-panel-mot-tianma-nt37707-636-fhdp-dphy-cmd-120hz-u9.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/dsi-panel-mot-tianma-nt37707-636-fhdp-dphy-cmd-120hz-u9.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "dsi-panel-mot-tianma-nt37707-636-fhdp-dphy-cmd-120hz.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/dsi-panel-mot-tianma-nt37707-636-fhdp-dphy-cmd-120hz.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "dw9781c.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/dw9781c.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "emi-fake-eng.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/emi-fake-eng.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "emi-mpu.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/emi-mpu.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "emi.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/emi.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "et5904.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/et5904.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "et59041c.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/et59041c.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "ets_fod_mmi_u.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/ets_fod_mmi_u.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "extcon-mtk-usb.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/extcon-mtk-usb.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "extdev_io_class.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/extdev_io_class.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "ffa_v10.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/ffa_v10.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "fhctl.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/fhctl.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "flashlight.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/flashlight.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "flashlights-ocp81373.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/flashlights-ocp81373.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "fmradio_drv_connac2x.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/fmradio_drv_connac2x.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "fpsgo.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/fpsgo.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "frs.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/frs.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "fs3001.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/fs3001.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "fsa4480-i2c.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/fsa4480-i2c.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "ftdi_sio.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/system_dlkm_a/lib/modules/ftdi_sio.ko",
+   "vermagic": "6.1.157-android14-11-g14047afecd8b-ab16012876 SMP preempt mod_unload modversions aarch64"
+  },
+  "ged.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/ged.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "goodix_brl_u_mmi.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/goodix_brl_u_mmi.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "goodix_gt96x_u_mmi.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/goodix_gt96x_u_mmi.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "gps_drv_dl_v051.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/gps_drv_dl_v051.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "gps_pwr.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/gps_pwr.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "gps_scp.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/gps_scp.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "gpueb.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/gpueb.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "gz_ipc_mod.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/gz_ipc_mod.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "gz_irq_mod.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/gz_irq_mod.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "gz_log_mod.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/gz_log_mod.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "gz_main_mod.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/gz_main_mod.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "gz_trusty_mod.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/gz_trusty_mod.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "gz_tz_system.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/gz_tz_system.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "gz_virtio_mod.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/gz_virtio_mod.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "gzvm.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/system_dlkm_a/lib/modules/gzvm.ko",
+   "vermagic": "6.1.157-android14-11-g14047afecd8b-ab16012876 SMP preempt mod_unload modversions aarch64"
+  },
+  "hbt.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/hbt.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "hci_uart.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/system_dlkm_a/lib/modules/hci_uart.ko",
+   "vermagic": "6.1.157-android14-11-g14047afecd8b-ab16012876 SMP preempt mod_unload modversions aarch64"
+  },
+  "hf_manager.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/hf_manager.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "hidp.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/system_dlkm_a/lib/modules/hidp.ko",
+   "vermagic": "6.1.157-android14-11-g14047afecd8b-ab16012876 SMP preempt mod_unload modversions aarch64"
+  },
+  "hl7603-regulator.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/hl7603-regulator.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "i2c-mt65xx.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/i2c-mt65xx.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "ieee802154.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/system_dlkm_a/lib/modules/ieee802154.ko",
+   "vermagic": "6.1.157-android14-11-g14047afecd8b-ab16012876 SMP preempt mod_unload modversions aarch64"
+  },
+  "ieee802154_6lowpan.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/system_dlkm_a/lib/modules/ieee802154_6lowpan.ko",
+   "vermagic": "6.1.157-android14-11-g14047afecd8b-ab16012876 SMP preempt mod_unload modversions aarch64"
+  },
+  "ieee802154_socket.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/system_dlkm_a/lib/modules/ieee802154_socket.ko",
+   "vermagic": "6.1.157-android14-11-g14047afecd8b-ab16012876 SMP preempt mod_unload modversions aarch64"
+  },
+  "imgsensor-glue.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/imgsensor-glue.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "imgsensor.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/imgsensor.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "industrialio-triggered-buffer.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/industrialio-triggered-buffer.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "iommu_debug.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/iommu_debug.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "iommu_secure.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/iommu_secure.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "iommu_test.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/iommu_test.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "irq-dbg.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/irq-dbg.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "isee-ffa.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/isee-ffa.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "kfifo_buf.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/kfifo_buf.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "kheaders.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/system_dlkm_a/lib/modules/kheaders.ko",
+   "vermagic": "6.1.157-android14-11-g14047afecd8b-ab16012876 SMP preempt mod_unload modversions aarch64"
+  },
+  "l2tp_core.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/system_dlkm_a/lib/modules/l2tp_core.ko",
+   "vermagic": "6.1.157-android14-11-g14047afecd8b-ab16012876 SMP preempt mod_unload modversions aarch64"
+  },
+  "l2tp_ppp.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/system_dlkm_a/lib/modules/l2tp_ppp.ko",
+   "vermagic": "6.1.157-android14-11-g14047afecd8b-ab16012876 SMP preempt mod_unload modversions aarch64"
+  },
+  "last_bus.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/last_bus.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "leds-mtk-disp.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/leds-mtk-disp.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "leds-mtk-pwm.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/leds-mtk-pwm.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "leds-mtk.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/leds-mtk.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "libarc4.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/system_dlkm_a/lib/modules/libarc4.ko",
+   "vermagic": "6.1.157-android14-11-g14047afecd8b-ab16012876 SMP preempt mod_unload modversions aarch64"
+  },
+  "lm3644.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/lm3644.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "load_track.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/load_track.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "log_store.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/log_store.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "lpm-gov-MHSP.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/lpm-gov-MHSP.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mac80211.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/mac80211.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mac802154.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/system_dlkm_a/lib/modules/mac802154.ko",
+   "vermagic": "6.1.157-android14-11-g14047afecd8b-ab16012876 SMP preempt mod_unload modversions aarch64"
+  },
+  "main2_vcm.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/main2_vcm.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "main3_vcm.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/main3_vcm.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "main4_vcm.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/main4_vcm.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "main_vcm.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/main_vcm.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mali_dmabuf_test_mt6878_r44.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/mali_dmabuf_test_mt6878_r44.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mali_kbase_mt6878_r44.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/mali_kbase_mt6878_r44.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mali_mgm_mt6878_r44.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/mali_mgm_mt6878_r44.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mali_prot_alloc_mt6878_r44.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/mali_prot_alloc_mt6878_r44.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mcDrvModule-ffa.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/mcDrvModule-ffa.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mcupm.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/mcupm.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "md_cooling_all.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/md_cooling_all.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mddp.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/mddp.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mdp_drv_mt6878.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/mdp_drv_mt6878.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mediatek-cpufreq-hw.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/mediatek-cpufreq-hw.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mediatek-drm-gateic.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/mediatek-drm-gateic.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mediatek-drm-panel-drv.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/mediatek-drm-panel-drv.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mediatek-drm.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/mediatek-drm.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "met.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/met.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "met_backlight_api.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/met_backlight_api.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "met_emi_api.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/met_emi_api.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "met_gpu_adv_api.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/met_gpu_adv_api.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "met_gpu_api.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/met_gpu_api.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "met_gpueb_api.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/met_gpueb_api.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "met_ipi_api.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/met_ipi_api.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "met_mcupm_api.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/met_mcupm_api.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "met_scmi_api.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/met_scmi_api.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "met_sspm_api.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/met_sspm_api.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "met_vcore_api.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/met_vcore_api.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mii.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/system_dlkm_a/lib/modules/mii.ko",
+   "vermagic": "6.1.157-android14-11-g14047afecd8b-ab16012876 SMP preempt mod_unload modversions aarch64"
+  },
+  "mkp.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/mkp.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mmi_gauge_class.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/mmi_gauge_class.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mmi_info.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/mmi_info.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mmi_pephv.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/mmi_pephv.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mmi_relay.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/mmi_relay.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mmprofile.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/mmprofile.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mmqos-common.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/mmqos-common.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mmqos-mt6878.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/mmqos-mt6878.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "monitor_hang.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/monitor_hang.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mot_dw9784.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/mot_dw9784.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mot_tele_dw9784.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/mot_tele_dw9784.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "moto_binder.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/moto_binder.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "moto_chg_tcmd.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/moto_chg_tcmd.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "moto_f_usbnet.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/moto_f_usbnet.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "moto_mmap_fault.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/moto_mmap_fault.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "moto_sched.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/moto_sched.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "moto_swap.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/moto_swap.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "moto_wlc_alg.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/moto_wlc_alg.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mrdump.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/mrdump.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "msync2_frd.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/msync2_frd.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mt6315-regulator.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/mt6315-regulator.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mt6338-core.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/mt6338-core.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mt6363-regulator.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/mt6363-regulator.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mt6369-accdet.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/mt6369-accdet.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mt6369-regulator.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/mt6369-regulator.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mt6375-adc.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/mt6375-adc.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mt6375-auxadc.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/mt6375-auxadc.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mt6375-battery.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/mt6375-battery.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mt6375-charger.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/mt6375-charger.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mt6375.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/mt6375.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mt6685-audclk.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/mt6685-audclk.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mt6685-core.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/mt6685-core.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mt6878-mt6369.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/mt6878-mt6369.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mt6878_dcm.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/mt6878_dcm.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk-afe-external.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/mtk-afe-external.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk-btcvsd.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/mtk-btcvsd.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk-cam-isp7sp.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/mtk-cam-isp7sp.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk-cmdq-drv-ext.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/mtk-cmdq-drv-ext.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk-composite.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/mtk-composite.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk-dvfsrc-devfreq.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/mtk-dvfsrc-devfreq.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk-dvfsrc-helper.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/mtk-dvfsrc-helper.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk-dvfsrc-regulator.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/mtk-dvfsrc-regulator.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk-dvfsrc-start.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/mtk-dvfsrc-start.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk-dvfsrc.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/mtk-dvfsrc.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk-emi.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/mtk-emi.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk-icc-core.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/mtk-icc-core.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk-ipesys-me.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/mtk-ipesys-me.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk-lpm-dbg-common-v2.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/mtk-lpm-dbg-common-v2.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk-lpm-dbg-mt6878.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/mtk-lpm-dbg-mt6878.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk-lpm-plat-v1.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/mtk-lpm-plat-v1.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk-lpm.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/mtk-lpm.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk-mbox-mailbox.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/mtk-mbox-mailbox.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk-mbox.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/mtk-mbox.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk-mmc-dbg.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/mtk-mmc-dbg.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk-mmc.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/mtk-mmc.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk-mmdvfs-debug.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/mtk-mmdvfs-debug.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk-mmdvfs-ftrace.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/mtk-mmdvfs-ftrace.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk-mmdvfs-v3-start.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/mtk-mmdvfs-v3-start.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk-mmdvfs-v3.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/mtk-mmdvfs-v3.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk-mmdvfs.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/mtk-mmdvfs.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk-mminfra-debug.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/mtk-mminfra-debug.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk-mminfra-imax.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/mtk-mminfra-imax.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk-mml-mt6878.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/mtk-mml-mt6878.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk-mml.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/mtk-mml.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk-pm-domain-disable-unused.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/mtk-pm-domain-disable-unused.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk-pmic-keys.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/mtk-pmic-keys.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk-pmic-oc-debug.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/mtk-pmic-oc-debug.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk-pmic-wrap.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/mtk-pmic-wrap.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk-pwm.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/mtk-pwm.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk-scp-audiocommon.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/mtk-scp-audiocommon.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk-scp-ultra.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/mtk-scp-ultra.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk-scp-vow.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/mtk-scp-vow.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk-scpsys-bringup.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/mtk-scpsys-bringup.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk-scpsys-mt6878.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/mtk-scpsys-mt6878.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk-scpsys.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/mtk-scpsys.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk-smi-dbg.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/mtk-smi-dbg.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk-smi.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/mtk-smi.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk-soc-offload-common.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/mtk-soc-offload-common.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk-socinfo.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/mtk-socinfo.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk-sp-spk-amp.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/mtk-sp-spk-amp.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk-spmi-pmic-adc.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/mtk-spmi-pmic-adc.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk-spmi-pmic.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/mtk-spmi-pmic.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk-ssc-dbg-v2.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/mtk-ssc-dbg-v2.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk-ssc.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/mtk-ssc.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk-swpm-cpu-dbg-v6878.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/mtk-swpm-cpu-dbg-v6878.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk-swpm-dbg-common-v1.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/mtk-swpm-dbg-common-v1.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk-swpm-dbg-v6878.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/mtk-swpm-dbg-v6878.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk-swpm-perf-arm-pmu.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/mtk-swpm-perf-arm-pmu.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk-swpm.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/mtk-swpm.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk-uart-apdma.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/mtk-uart-apdma.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk-vcodec-common.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/mtk-vcodec-common.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk-vcodec-dec-v1.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/mtk-vcodec-dec-v1.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk-vcodec-enc-v1.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/mtk-vcodec-enc-v1.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk-vcu.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/mtk-vcu.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk-vmm-isp71-regulator.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/mtk-vmm-isp71-regulator.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk-vmm-notifier.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/mtk-vmm-notifier.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk-vmm-spm.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/mtk-vmm-spm.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk-vow.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/mtk-vow.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk-wp.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/mtk-wp.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk_aie.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/mtk_aie.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk_aie_debug_7sp_2.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/mtk_aie_debug_7sp_2.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk_battery_oc_throttling.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/mtk_battery_oc_throttling.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk_bp_thl.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/mtk_bp_thl.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk_c2ps.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/mtk_c2ps.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk_ccd_remoteproc.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/mtk_ccd_remoteproc.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk_ccuv.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/mtk_ccuv.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk_cg_peak_power_throttling.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/mtk_cg_peak_power_throttling.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk_charger_algorithm_class.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/mtk_charger_algorithm_class.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk_charger_framework.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/mtk_charger_framework.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk_chg_type_det.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/mtk_chg_type_det.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk_cm_ipi.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/mtk_cm_ipi.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk_cm_mgr.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/mtk_cm_mgr.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk_cm_mgr_mt6878.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/mtk_cm_mgr_mt6878.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk_core_ctl.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/mtk_core_ctl.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk_cpu_power_throttling.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/mtk_cpu_power_throttling.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk_dcm.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/mtk_dcm.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk_disp_notify.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/mtk_disp_notify.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk_disp_sec.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/mtk_disp_sec.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk_dpc.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/mtk_dpc.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk_dramc.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/mtk_dramc.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk_dynamic_loading_throttling.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/mtk_dynamic_loading_throttling.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk_fpsgo.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/mtk_fpsgo.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk_gpu_hal.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/mtk_gpu_hal.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk_gpu_power_throttling.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/mtk_gpu_power_throttling.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk_gpu_qos.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/mtk_gpu_qos.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk_gpufreq_mt6878.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/mtk_gpufreq_mt6878.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk_gpufreq_wrapper.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/mtk_gpufreq_wrapper.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk_hcp.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/mtk_hcp.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk_heap_debug.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/mtk_heap_debug.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk_imgsys_cmdq.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/mtk_imgsys_cmdq.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk_imgsys_isp7sp.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/mtk_imgsys_isp7sp.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk_imgsys_v4l2.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/mtk_imgsys_v4l2.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk_ioctl_powerhal.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/mtk_ioctl_powerhal.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk_ioctl_touch_boost.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/mtk_ioctl_touch_boost.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk_iommu.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/mtk_iommu.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk_irtx_pwm.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/mtk_irtx_pwm.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk_jpeg.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/mtk_jpeg.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk_low_battery_throttling.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/mtk_low_battery_throttling.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk_md_power_throttling.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/mtk_md_power_throttling.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk_mdpm.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/mtk_mdpm.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk_panel_ext.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/mtk_panel_ext.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk_pbm.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/mtk_pbm.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk_pd_adapter.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/mtk_pd_adapter.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk_pd_charging.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/mtk_pd_charging.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk_peak_power_budget.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/mtk_peak_power_budget.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk_pep.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/mtk_pep.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk_pep20.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/mtk_pep20.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk_pep40.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/mtk_pep40.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk_pep45.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/mtk_pep45.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk_pep50.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/mtk_pep50.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk_perf_common.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/mtk_perf_common.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk_perf_ioctl.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/mtk_perf_ioctl.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk_perf_ioctl_magt.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/mtk_perf_ioctl_magt.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk_printk_ctrl.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/mtk_printk_ctrl.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk_qos.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/mtk_qos.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk_rpmsg_mbox.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/mtk_rpmsg_mbox.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk_sec_heap.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/mtk_sec_heap.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk_slbc.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/mtk_slbc.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk_sync.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/mtk_sync.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk_tinysys_ipi.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/mtk_tinysys_ipi.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk_u_ether.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/mtk_u_ether.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk_usb_f_rndis.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/mtk_usb_f_rndis.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtk_wdt.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/mtk_wdt.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mtu3.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/mtu3.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "mux_switch.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/mux_switch.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "nfc.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/system_dlkm_a/lib/modules/nfc.ko",
+   "vermagic": "6.1.157-android14-11-g14047afecd8b-ab16012876 SMP preempt mod_unload modversions aarch64"
+  },
+  "nfg1000_fg_mmi.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/nfg1000_fg_mmi.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "nhc_dest.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/system_dlkm_a/lib/modules/nhc_dest.ko",
+   "vermagic": "6.1.157-android14-11-g14047afecd8b-ab16012876 SMP preempt mod_unload modversions aarch64"
+  },
+  "nhc_fragment.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/system_dlkm_a/lib/modules/nhc_fragment.ko",
+   "vermagic": "6.1.157-android14-11-g14047afecd8b-ab16012876 SMP preempt mod_unload modversions aarch64"
+  },
+  "nhc_hop.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/system_dlkm_a/lib/modules/nhc_hop.ko",
+   "vermagic": "6.1.157-android14-11-g14047afecd8b-ab16012876 SMP preempt mod_unload modversions aarch64"
+  },
+  "nhc_ipv6.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/system_dlkm_a/lib/modules/nhc_ipv6.ko",
+   "vermagic": "6.1.157-android14-11-g14047afecd8b-ab16012876 SMP preempt mod_unload modversions aarch64"
+  },
+  "nhc_mobility.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/system_dlkm_a/lib/modules/nhc_mobility.ko",
+   "vermagic": "6.1.157-android14-11-g14047afecd8b-ab16012876 SMP preempt mod_unload modversions aarch64"
+  },
+  "nhc_routing.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/system_dlkm_a/lib/modules/nhc_routing.ko",
+   "vermagic": "6.1.157-android14-11-g14047afecd8b-ab16012876 SMP preempt mod_unload modversions aarch64"
+  },
+  "nhc_udp.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/system_dlkm_a/lib/modules/nhc_udp.ko",
+   "vermagic": "6.1.157-android14-11-g14047afecd8b-ab16012876 SMP preempt mod_unload modversions aarch64"
+  },
+  "nu2115_mmi.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/nu2115_mmi.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "nvmem-mt635x-efuse.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/nvmem-mt635x-efuse.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "nvmem_mtk-devinfo.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/nvmem_mtk-devinfo.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "panel-alpha-jdi-nt36672e-cphy-vdo.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/panel-alpha-jdi-nt36672e-cphy-vdo.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "panel-alpha-jdi-nt36672e-vdo-120hz-hfp.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/panel-alpha-jdi-nt36672e-vdo-120hz-hfp.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "panel-alpha-jdi-nt36672e-vdo-120hz-threshold.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/panel-alpha-jdi-nt36672e-vdo-120hz-threshold.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "panel-alpha-jdi-nt36672e-vdo-120hz.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/panel-alpha-jdi-nt36672e-vdo-120hz.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "panel-alpha-jdi-nt36672e-vdo-144hz.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/panel-alpha-jdi-nt36672e-vdo-144hz.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "panel-alpha-jdi-nt36672e-vdo-60hz.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/panel-alpha-jdi-nt36672e-vdo-60hz.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "panel-nt37701a-cmd.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/panel-nt37701a-cmd.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "panel-nt37801-cmd-120hz.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/panel-nt37801-cmd-120hz.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "panel-nt37801-cmd-spr.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/panel-nt37801-cmd-spr.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "panel-samsung-ana6705-cmd.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/panel-samsung-ana6705-cmd.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "panel-truly-nt35595-cmd.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/panel-truly-nt35595-cmd.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "panel-truly-td4330-cmd.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/panel-truly-td4330-cmd.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "pd-chk-mt6878.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/pd-chk-mt6878.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "pd_dbg_info.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/pd_dbg_info.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "pda_drv_mt6878.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/pda_drv_mt6878.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "phy-mtk-ufs.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/phy-mtk-ufs.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "phy-mtk-xsphy.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/phy-mtk-xsphy.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "pidmap.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/pidmap.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "pinctrl-mt6363.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/pinctrl-mt6363.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "pinctrl-mt6878.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/pinctrl-mt6878.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "pinctrl-mtk-common-v2_debug.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/pinctrl-mtk-common-v2_debug.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "pinctrl-mtk-v2.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/pinctrl-mtk-v2.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "pmic_lbat_service.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/pmic_lbat_service.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "pmic_lvsys_notify.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/pmic_lvsys_notify.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "pmic_temp.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/pmic_temp.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "powerhal_cpu_ctrl.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/powerhal_cpu_ctrl.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "ppp_deflate.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/system_dlkm_a/lib/modules/ppp_deflate.ko",
+   "vermagic": "6.1.157-android14-11-g14047afecd8b-ab16012876 SMP preempt mod_unload modversions aarch64"
+  },
+  "ppp_generic.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/system_dlkm_a/lib/modules/ppp_generic.ko",
+   "vermagic": "6.1.157-android14-11-g14047afecd8b-ab16012876 SMP preempt mod_unload modversions aarch64"
+  },
+  "ppp_mppe.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/system_dlkm_a/lib/modules/ppp_mppe.ko",
+   "vermagic": "6.1.157-android14-11-g14047afecd8b-ab16012876 SMP preempt mod_unload modversions aarch64"
+  },
+  "pppox.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/system_dlkm_a/lib/modules/pppox.ko",
+   "vermagic": "6.1.157-android14-11-g14047afecd8b-ab16012876 SMP preempt mod_unload modversions aarch64"
+  },
+  "pptp.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/system_dlkm_a/lib/modules/pptp.ko",
+   "vermagic": "6.1.157-android14-11-g14047afecd8b-ab16012876 SMP preempt mod_unload modversions aarch64"
+  },
+  "pwm-mtk-disp.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/pwm-mtk-disp.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "qpnp_adaptive_charge.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/qpnp_adaptive_charge.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "r8152.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/system_dlkm_a/lib/modules/r8152.ko",
+   "vermagic": "6.1.157-android14-11-g14047afecd8b-ab16012876 SMP preempt mod_unload modversions aarch64"
+  },
+  "r8153_ecm.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/system_dlkm_a/lib/modules/r8153_ecm.ko",
+   "vermagic": "6.1.157-android14-11-g14047afecd8b-ab16012876 SMP preempt mod_unload modversions aarch64"
+  },
+  "reboot-mode.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/reboot-mode.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "regulator-vibrator.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/regulator-vibrator.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "reset-ti-syscon.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/reset-ti-syscon.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "rfcomm.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/system_dlkm_a/lib/modules/rfcomm.ko",
+   "vermagic": "6.1.157-android14-11-g14047afecd8b-ab16012876 SMP preempt mod_unload modversions aarch64"
+  },
+  "rfkill.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/system_dlkm_a/lib/modules/rfkill.ko",
+   "vermagic": "6.1.157-android14-11-g14047afecd8b-ab16012876 SMP preempt mod_unload modversions aarch64"
+  },
+  "richtek_spm_cls.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/richtek_spm_cls.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "rpmb-mtk.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/rpmb-mtk.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "rpmb.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/rpmb.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "rps_perf.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/rps_perf.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "rt4831a_drv.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/rt4831a_drv.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "rt5133-regulator.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/rt5133-regulator.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "rt6160-regulator.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/rt6160-regulator.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "rt_pd_manager.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/rt_pd_manager.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "rtc-mt6685.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/rtc-mt6685.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "rtl8150.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/system_dlkm_a/lib/modules/rtl8150.ko",
+   "vermagic": "6.1.157-android14-11-g14047afecd8b-ab16012876 SMP preempt mod_unload modversions aarch64"
+  },
+  "sapu.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/sapu.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "scheduler.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/scheduler.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "scheduler_ext.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/scheduler_ext.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "scp.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/scp.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "sec-rng.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/sec-rng.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "sec.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/sec.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "sensorhub.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/sensorhub.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "sensors_class.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/sensors_class.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "skb_latency.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/skb_latency.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "slcan.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/system_dlkm_a/lib/modules/slcan.ko",
+   "vermagic": "6.1.157-android14-11-g14047afecd8b-ab16012876 SMP preempt mod_unload modversions aarch64"
+  },
+  "slhc.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/system_dlkm_a/lib/modules/slhc.ko",
+   "vermagic": "6.1.157-android14-11-g14047afecd8b-ab16012876 SMP preempt mod_unload modversions aarch64"
+  },
+  "smart_battery.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/smart_battery.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "smpu-hook-v1.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/smpu-hook-v1.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "smpu.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/smpu.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "snd-soc-audiodsp-common.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/snd-soc-audiodsp-common.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "snd-soc-fs19xx.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/snd-soc-fs19xx.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "snd-soc-mt6369.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/snd-soc-mt6369.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "snd-soc-mt6878-afe.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/snd-soc-mt6878-afe.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "snd-soc-mtk-common.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/snd-soc-mtk-common.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "snd-soc-mtk-scp-ultra.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/snd-soc-mtk-scp-ultra.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "snd-soc-rt5512.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/snd-soc-rt5512.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "snd-soc-tfa9865.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/snd-soc-tfa9865.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "soc_temp_lvts.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/soc_temp_lvts.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "spi-mt65xx.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/spi-mt65xx.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "spmi-mtk-mpu.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/spmi-mtk-mpu.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "spmi-mtk-pmif.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/spmi-mtk-pmif.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "sspm_v3.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/sspm_v3.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "st54lnfc.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/st54lnfc.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "st54lspi.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/st54lspi.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "sub_vcm.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/sub_vcm.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "sx937x_sar.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/sx937x_sar.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "syscon-reboot-mode.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/syscon-reboot-mode.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "system_heap.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/system_heap.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "t-base-tui.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/t-base-tui.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "task_turbo.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/task_turbo.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "tcpc_class.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/tcpc_class.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "tcpc_mt6375.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/tcpc_mt6375.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "tcpci_late_sync.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/tcpci_late_sync.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "teeperf.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/teeperf.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "thermal-generic-adc.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/thermal-generic-adc.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "thermal_interface.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/thermal_interface.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "thermal_trace.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/thermal_trace.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "timer-mediatek.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/timer-mediatek.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "tinysys-scmi.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/tinysys-scmi.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "tipc.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/system_dlkm_a/lib/modules/tipc.ko",
+   "vermagic": "6.1.157-android14-11-g14047afecd8b-ab16012876 SMP preempt mod_unload modversions aarch64"
+  },
+  "tmem_ffa.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/tmem_ffa.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "touch_boost.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/touch_boost.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "touchscreen_u_mmi.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/touchscreen_u_mmi.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "trace_mmstat.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/trace_mmstat.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "tui-common.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/tui-common.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "uarthub_drv.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/uarthub_drv.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "ufs-mediatek-dbg.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/ufs-mediatek-dbg.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "ufs-mediatek-mod.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/ufs-mediatek-mod.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "uload_ind.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/uload_ind.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "usb_boost.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/usb_boost.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "usb_logger.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/usb_logger.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "usb_meta.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/usb_meta.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "usb_offload.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/usb_offload.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "usbnet.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/system_dlkm_a/lib/modules/usbnet.ko",
+   "vermagic": "6.1.157-android14-11-g14047afecd8b-ab16012876 SMP preempt mod_unload modversions aarch64"
+  },
+  "usbserial.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/system_dlkm_a/lib/modules/usbserial.ko",
+   "vermagic": "6.1.157-android14-11-g14047afecd8b-ab16012876 SMP preempt mod_unload modversions aarch64"
+  },
+  "utags.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/utags.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "vcan.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/system_dlkm_a/lib/modules/vcan.ko",
+   "vermagic": "6.1.157-android14-11-g14047afecd8b-ab16012876 SMP preempt mod_unload modversions aarch64"
+  },
+  "vcp.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/vcp.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "vcp_status.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/vcp_status.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "vtskin_temp.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/vtskin_temp.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "widevine_driver.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/widevine_driver.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "wifi_cooling.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/wifi_cooling.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "wlan_drv_gen4m_6878.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/wlan_drv_gen4m_6878.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "wmt_chrdev_wifi_connac2.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/vendor_dlkm_a/lib/modules/wmt_chrdev_wifi_connac2.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "wwan.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/system_dlkm_a/lib/modules/wwan.ko",
+   "vermagic": "6.1.157-android14-11-g14047afecd8b-ab16012876 SMP preempt mod_unload modversions aarch64"
+  },
+  "xhci-mtk-hcd-v2.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/vendor_boot/rd_vendor_ramdisk00/lib/modules/xhci-mtk-hcd-v2.ko",
+   "vermagic": "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64"
+  },
+  "zram.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/system_dlkm_a/lib/modules/zram.ko",
+   "vermagic": "6.1.157-android14-11-g14047afecd8b-ab16012876 SMP preempt mod_unload modversions aarch64"
+  },
+  "zsmalloc.ko": {
+   "mismatch": [],
+   "missing": [],
+   "path": "/work/fw/an/super/system_dlkm_a/lib/modules/zsmalloc.ko",
+   "vermagic": "6.1.157-android14-11-g14047afecd8b-ab16012876 SMP preempt mod_unload modversions aarch64"
+  }
+ },
+ "summary": {
+  "crc_mismatches": 0,
+  "modules_checked": 498,
+  "modules_replaced_by_candidate": [
+   "cpufreq_sugov_ext.ko"
+  ],
+  "unresolved_symbols": 0,
+  "vermagic_mismatches": 0,
+  "vermagic_values": {
+   "6.1.157-android14-11-g14047afecd8b-ab16012876 SMP preempt mod_unload modversions aarch64": 59,
+   "6.1.157-android14-11-gb7fc4b7b6b17 SMP preempt mod_unload modversions aarch64": 439
+  }
+ }
+}

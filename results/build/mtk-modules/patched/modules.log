@@ -1,0 +1,47 @@
+make: Entering directory '/work/src/kernel-mtk'
+make[1]: Entering directory '/work/out/mgk'
+  CC [M]  /work/src/kdm/.s50-wrap/drivers_misc_mediatek_sched/eas/sched_main.o
+  CC [M]  /work/src/kdm/.s50-wrap/drivers_misc_mediatek_sched/eas/sched_sys_common.o
+  CC [M]  /work/src/kdm/.s50-wrap/drivers_misc_mediatek_sched/eas/eas_plus.o
+  CC [M]  /work/src/kdm/.s50-wrap/drivers_misc_mediatek_sched/eas/rt.o
+  CC [M]  /work/src/kdm/.s50-wrap/drivers_misc_mediatek_sched/eas/topology.o
+  CC [M]  /work/src/kdm/.s50-wrap/drivers_misc_mediatek_sched/eas/dsu_pwr.o
+  CC [M]  /work/src/kdm/.s50-wrap/drivers_misc_mediatek_sched/eas/eas_adpf.o
+  CC [M]  /work/src/kdm/.s50-wrap/drivers_misc_mediatek_sched/common.o
+  CC [M]  /work/src/kdm/.s50-wrap/drivers_misc_mediatek_sched/fair.o
+  CC [M]  /work/src/kdm/.s50-wrap/drivers_misc_mediatek_sched/eas/core_pause.o
+  CC [M]  /work/src/kdm/.s50-wrap/drivers_misc_mediatek_sched/eas/rotate.o
+  CC [M]  /work/src/kdm/.s50-wrap/drivers_misc_mediatek_sched/eas/vip.o
+  CC [M]  /work/src/kdm/.s50-wrap/drivers_misc_mediatek_sched/eas/flt_init.o
+  CC [M]  /work/src/kdm/.s50-wrap/drivers_misc_mediatek_sched/eas/flt_api.o
+  CC [M]  /work/src/kdm/.s50-wrap/drivers_misc_mediatek_sched/eas/group.o
+  CC [M]  /work/src/kdm/.s50-wrap/drivers_misc_mediatek_sched/eas/flt_utility.o
+  CC [M]  /work/src/kdm/.s50-wrap/drivers_misc_mediatek_sched/eas/flt_cal_build_utility.o
+  CC [M]  /work/src/kdm/.s50-wrap/drivers_misc_mediatek_sched/sugov/cpufreq_sugov_main.o
+  CC [M]  /work/src/kdm/.s50-wrap/drivers_misc_mediatek_sched/mtk_energy_model/v2/static_power.o
+  CC [M]  /work/src/kdm/.s50-wrap/drivers_misc_mediatek_sched/sugov/nonlinear_opp_cap.o
+  CC [M]  /work/src/kdm/.s50-wrap/drivers_misc_mediatek_sched/sugov/dsu_interface.o
+  CC [M]  /work/src/kdm/.s50-wrap/drivers_misc_mediatek_sched/sugov/sched_version_ctrl.o
+  CC [M]  /work/src/kdm/.s50-wrap/drivers_misc_mediatek_sched/core_ctl/sched_avg.o
+  CC [M]  /work/src/kdm/.s50-wrap/drivers_misc_mediatek_sched/core_ctl/core_ctl.o
+  LD [M]  /work/src/kdm/.s50-wrap/drivers_misc_mediatek_sched/scheduler.o
+  LD [M]  /work/src/kdm/.s50-wrap/drivers_misc_mediatek_sched/cpufreq_sugov_ext.o
+  LD [M]  /work/src/kdm/.s50-wrap/drivers_misc_mediatek_sched/mtk_core_ctl.o
+  MODPOST /work/src/kdm/.s50-wrap/Module.symvers
+WARNING: Module.symvers is missing.
+         Modules may not have dependencies or modversions.
+         You may get many unresolved symbol warnings.
+  CC [M]  /work/src/kdm/.s50-wrap/drivers_misc_mediatek_sched/cpufreq_sugov_ext.mod.o
+  CC [M]  /work/src/kdm/.s50-wrap/drivers_misc_mediatek_sched/mtk_core_ctl.mod.o
+  CC [M]  /work/src/kdm/.s50-wrap/drivers_misc_mediatek_sched/scheduler.mod.o
+  LD [M]  /work/src/kdm/.s50-wrap/drivers_misc_mediatek_sched/mtk_core_ctl.ko
+  LD [M]  /work/src/kdm/.s50-wrap/drivers_misc_mediatek_sched/cpufreq_sugov_ext.ko
+  BTF [M] /work/src/kdm/.s50-wrap/drivers_misc_mediatek_sched/mtk_core_ctl.ko
+Skipping BTF generation for /work/src/kdm/.s50-wrap/drivers_misc_mediatek_sched/mtk_core_ctl.ko due to unavailability of vmlinux
+  LD [M]  /work/src/kdm/.s50-wrap/drivers_misc_mediatek_sched/scheduler.ko
+  BTF [M] /work/src/kdm/.s50-wrap/drivers_misc_mediatek_sched/cpufreq_sugov_ext.ko
+Skipping BTF generation for /work/src/kdm/.s50-wrap/drivers_misc_mediatek_sched/cpufreq_sugov_ext.ko due to unavailability of vmlinux
+  BTF [M] /work/src/kdm/.s50-wrap/drivers_misc_mediatek_sched/scheduler.ko
+Skipping BTF generation for /work/src/kdm/.s50-wrap/drivers_misc_mediatek_sched/scheduler.ko due to unavailability of vmlinux
+make[1]: Leaving directory '/work/out/mgk'
+make: Leaving directory '/work/src/kernel-mtk'

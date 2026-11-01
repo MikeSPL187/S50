@@ -1,0 +1,9 @@
+# GKI rebuild summary
+abi_symbollist.raw: 8769 symbols from 34 lists
+incremental rebuild time (this log): 83 s; first full build (Image + 59 GKI modules, 4 vCPU) took 707 s — that log was overwritten by the incremental runs
+warnings in build.log: 0
+errors in build.log: 0
+
+make[1]: Leaving directory '/work/out/gki'
+make: Leaving directory '/work/src/common'
+incremental rebuild time (this log): 83 s; first full build (Image + 59 GKI modules, 4 vCPU) took 707 s — that log was overwritten by the incremental runs

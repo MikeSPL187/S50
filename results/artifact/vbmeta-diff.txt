@@ -1,0 +1,34 @@
+header rollback_index: stock=27 new=27 OK
+header flags: stock=0 new=0 OK
+header rollback_index_location: stock=0 new=0 OK
+header algorithm: stock=SHA256_RSA2048 new=SHA256_RSA2048 (key differs by design)
+  same     ChainPartition:vbmeta_system
+  same     Hash:boot
+  same     Hash:dtbo
+  same     Hash:init_boot
+  same     Hash:vendor_boot
+  same     Hashtree:product
+  same     Hashtree:system_dlkm
+  same     Hashtree:vendor
+  changed  Hashtree:vendor_dlkm (allowed)
+  same     Property:HAB_META:b'vienna_50'
+  same     Property:KERN_PROT_META:b'rodata_bounds:65536,17039360,29229056'
+  same     Property:com.android.build.boot.fingerprint:b'motorola/vienna_g_hal/vienna:14/W1UI36H.'
+  same     Property:com.android.build.boot.os_version:b'14'
+  same     Property:com.android.build.boot.security_patch:b'2026-09-01'
+  same     Property:com.android.build.dtbo.fingerprint:b'motorola/vienna_g_vext/vienna:14/W1UI36H'
+  same     Property:com.android.build.init_boot.fingerprint:b'motorola/vienna_g_hal/vienna:14/W1UI36H.'
+  same     Property:com.android.build.init_boot.os_version:b'14'
+  same     Property:com.android.build.init_boot.security_patch:b'2026-09-01'
+  same     Property:com.android.build.product.fingerprint:b'motorola/vienna_g_sys/vienna:16/W1UI36M.'
+  same     Property:com.android.build.product.os_version:b'16'
+  same     Property:com.android.build.product.security_patch:b'2026-09-01'
+  same     Property:com.android.build.system_dlkm.fingerprint:b'motorola/vienna_g_hal/vienna:14/W1UI36H.'
+  same     Property:com.android.build.system_dlkm.os_version:b'14'
+  same     Property:com.android.build.vendor.fingerprint:b'motorola/vienna_g_hal/vienna:14/W1UI36H.'
+  same     Property:com.android.build.vendor.os_version:b'14'
+  same     Property:com.android.build.vendor.security_patch:b'2026-09-01'
+  same     Property:com.android.build.vendor_boot.fingerprint:b'motorola/vienna_g_hal/vienna:14/W1UI36H.'
+  same     Property:com.android.build.vendor_dlkm.fingerprint:b'motorola/vienna_g_hal/vienna:14/W1UI36H.'
+  same     Property:com.android.build.vendor_dlkm.os_version:b'14'
+VBMETA DIFF: OK

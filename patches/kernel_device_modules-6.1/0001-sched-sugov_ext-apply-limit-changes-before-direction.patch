@@ -1,0 +1,89 @@
+From 631d9b14bf6ae4d7f8a13cb873b41cc48c97a6e4 Mon Sep 17 00:00:00 2001
+From: S50 kernel project <xfopjl@outlook.com>
+Date: Sun, 1 Nov 2026 15:16:23 +0000
+Subject: [PATCH 1/2] sched: sugov_ext: apply limit changes before directional
+ rate limiting
+
+Problem
+  sugov_update_next_freq() evaluated the up/down rate limit before it
+  looked at sg_policy->need_freq_update.  need_freq_update is raised by
+  sugov_limits() when the cpufreq policy min/max changed (freq_qos
+  requests from PowerHAL, FPSGO, thermal) and by ignore_dl_rate_limit()
+  when DEADLINE bandwidth grew.  The code comments say both cases must
+  bypass rate limiting, but the directional check could still defer
+  them by up to up_rate_limit_us / down_rate_limit_us.  The cpufreq
+  policy uses fast switching, so new limits are only enforced when a
+  frequency is committed: a boost or a thermal cap could be applied late.
+
+Change
+  Skip the directional rate-limit check when need_freq_update is set.
+  Everything else (frequency computation, wl/DSU forced updates) is
+  unchanged.  No structure layout, exported symbol or prototype changes.
+  Runtime switch for A/B testing (root only):
+    /sys/module/cpufreq_sugov_ext/parameters/rl_bypass_on_limits (default Y)
+
+Expected effect
+  Only visible when up/down_rate_limit_us is larger than the interval
+  between scheduler utilization updates.  The stock PowerHAL tables use
+  0..10 us outside of boot, so on stock settings the effect is expected
+  to be negligible; it matters when rate limits are raised.
+
+Verification
+  Perfetto: compare the latency between a freq_qos change
+  (power/cpu_frequency_limits) and the next power/cpu_frequency event,
+  with rl_bypass_on_limits=0 vs 1, at up/down_rate_limit_us=10000.
+
+Rollback
+  echo N > /sys/module/cpufreq_sugov_ext/parameters/rl_bypass_on_limits
+  or restore the stock vendor_dlkm image.
+---
+ .../mediatek/sched/sugov/cpufreq_sugov_main.c | 25 ++++++++++++++++++-
+ 1 file changed, 24 insertions(+), 1 deletion(-)
+
+diff --git a/drivers/misc/mediatek/sched/sugov/cpufreq_sugov_main.c b/drivers/misc/mediatek/sched/sugov/cpufreq_sugov_main.c
+index 114dd0a..6fd8c07 100644
+--- a/drivers/misc/mediatek/sched/sugov/cpufreq_sugov_main.c
++++ b/drivers/misc/mediatek/sched/sugov/cpufreq_sugov_main.c
+@@ -12,6 +12,7 @@
+  */
+ #define pr_fmt(fmt) KBUILD_MODNAME ": " fmt
+ 
++#include <linux/moduleparam.h>
+ #include <linux/sched/cputime.h>
+ #include <sched/sched.h>
+ #include "cpufreq.h"
+@@ -211,11 +212,33 @@ static bool sugov_up_down_rate_limit(struct sugov_policy *sg_policy, u64 time,
+ 	return false;
+ }
+ 
++/*
++ * need_freq_update is raised when the cpufreq policy limits changed
++ * (sugov_limits(): freq_qos min/max requests from PowerHAL, FPSGO or thermal)
++ * or when DEADLINE bandwidth grew (ignore_dl_rate_limit()).  Both cases are
++ * explicitly meant to bypass rate limiting (see the comments above
++ * ignore_dl_rate_limit() and in sugov_should_update_freq()), but the
++ * directional up/down rate limit used to be evaluated first and could defer
++ * the new limits by up to up/down_rate_limit_us.  With fast switching the
++ * limits are only applied when a frequency is committed, so the deferral was
++ * real.  Honour need_freq_update before the directional rate limit.
++ *
++ * Runtime switch for A/B testing (root):
++ *   /sys/module/cpufreq_sugov_ext/parameters/rl_bypass_on_limits
++ */
++static bool sugov_rl_bypass_on_limits = true;
++module_param_named(rl_bypass_on_limits, sugov_rl_bypass_on_limits, bool, 0644);
++MODULE_PARM_DESC(rl_bypass_on_limits,
++		 "Apply policy limit / DL changes without waiting for up/down rate limits (default: Y)");
++
+ static int wl_cnt_cached;
+ static bool sugov_update_next_freq(struct sugov_policy *sg_policy, u64 time,
+ 				   unsigned int next_freq)
+ {
+-	if (sugov_up_down_rate_limit(sg_policy, time, next_freq))
++	bool forced = sg_policy->need_freq_update &&
++		      READ_ONCE(sugov_rl_bypass_on_limits);
++
++	if (!forced && sugov_up_down_rate_limit(sg_policy, time, next_freq))
+ 		return false;
+ 
+ 	if (sg_policy->need_freq_update || wl_cnt_cached != wl_type_delay_ch_cnt

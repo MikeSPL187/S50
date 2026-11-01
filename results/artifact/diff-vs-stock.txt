@@ -1,0 +1,4 @@
+DIFF /lib/modules/cpufreq_sugov_ext.ko
+  stock: ('100644', 0, 0, 'u:object_r:vendor_file:s0', 'a94f89666f68aab1079d20290c433b78c8517342bb84dd27992ed75d99c02f20')
+  new  : ('100644', 0, 0, 'u:object_r:vendor_file:s0', '949f29813cca4756af5ab44e2eb5794a81b786212b7780b355502c80f0939ec8')
+paths: stock=246 new=246 differing=1
