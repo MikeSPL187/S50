@@ -1,0 +1,9 @@
+# SHA-256 эталонных образов из пакета W1UI36H.39-25-11-4 (7z sha256 6bc78abc...f6a3)
+f8a5f539754947deeb54bf80a1927e93b5807c81f0fca7aab04cbc8ee25ac919  ./boot.img
+59b64d0e216cc3aa08f125799b52d89cb2d60029a155a80b564ed32e1d297ba8  ./init_boot.img
+5a0c47aaf3f9852d758de53901ab23411de1afca4706083d0b2f1531774bfa49  ./vendor_boot.img
+9a442cf2d48b02001c6a002ce03f29099edd1a41da1e5eb74492f91cf06feda6  ./dtbo.img
+654e7f9fcf3c7f18a4f3c143cb68fa16ae383f09960547ccaf55b0ded10405e3  ./vbmeta.img
+1528d9c7b325c1c3ac41a94b87f418523fd4e871a56b01a5f51e9903012754b9  ./vbmeta_system.img
+91a9ade67032c86c6c05c8a6a2daea9ae14a870c7f421b220cbbc45afd7bfcb0  ./vendor_dlkm_a.img
+917666e69954046a1c50e4c7031348618b4f660d258eead2bb8f1b6fd5121c42  ./system_dlkm_a.img

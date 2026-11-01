@@ -33,3 +33,29 @@
 | `90` из fastbootd, слот A, загрузка отклонена | vendor_dlkm_a → загрузчик → vbmeta_a, без загрузки | `flash vendor_dlkm_a (fastbootd); reboot bootloader; flash vbmeta_a (загрузчик)` | OK |
 | `90 --all`, неверная фраза | ничего не записано | записей нет | OK |
 | `tools/bootimg_kernel.py` на стоковом `boot.img` | баннер = `EXPECT_PROC_VERSION` в `00-readonly-diagnostics.sh` | совпал | OK |
+
+## Тесты после второй рецензии (01.11.2026)
+
+Имитаторы `adb` (значения свойств задаются) и `fastboot` (с состоянием; `version-bootloader` отдаётся частями
+`[0]`/`[1]`, как у Motorola). Ничего не записывается.
+
+| Сценарий | Результат |
+|---|---|
+| `20 --recheck-only`, все значения стоковые | 9/9 OK, маркер `schema=1` создан |
+| `20 --recheck-only`, `ro.carrier=retapac` | НЕ СОВПАДАЕТ, маркера нет, создан `DEVICE-MISMATCH.txt` |
+| `20 --recheck-only`, adb недоступен, был старый маркер | ОСТАНОВКА, старый маркер удалён |
+| `30`, свежий маркер, всё стоковое | ПРОЙДЕНА |
+| `30`, маркер старше 120 мин | СТОП (возраст 180 мин) |
+| `30`, `SHA256SUMS` копии изменён после сверки | СТОП (копия изменилась после сверки) |
+| `30`, образ на 64 КиБ больше раздела | СТОП (размер; заодно hashtree и root digest) |
+| `30`, fastboot `ro.carrier=retapac` | СТОП |
+| `30`, `securestate=oem_locked` | СТОП |
+| `30`, `securestate` пуст, свежий маркер | ПРОЙДЕНА с информационной строкой |
+| `30`, `version-bootloader` другой сборки | СТОП |
+| `gvm version-bootloader` из двух частей | склеено в `MBM-3.1-vienna-ddf047-W1UI36H.39-25-11-4-2734cd` |
+| `90`, слот A, сборка W1UI36H | vbmeta_a → fastbootd → vendor_dlkm_a → загрузчик, без загрузки |
+| `90`, слот A, другая сборка (с `--accept-unverified-build` тоже) | ОСТАНОВКА, записей нет |
+| `90`, слот A, сборка не читается: без флага / с флагом | ОСТАНОВКА / восстановление |
+| `90 --set-active-a`, слот B, загрузчик V1UI35H или W1UI36H | vbmeta_a → set-active a → fastbootd → vendor_dlkm_a → загрузчик |
+| `90 --set-active-a`, слот B с другой сборкой (OTA) | ОСТАНОВКА, записей нет |
+| `40`, полный цикл со свежим маркером, загрузка отклонена | vbmeta_a → fastbootd → vendor_dlkm_a → загрузчик |

@@ -19,15 +19,19 @@
 #  разделы слота B. Загрузчик не блокируется. Систему не загружает без
 #  отдельного подтверждения.
 #
+#  --accept-unverified-build  продолжить, если version-bootloader не читается
+#                 (unknown); при явно ДРУГОЙ сборке откат запрещён всегда.
+#
 #  Запуск: телефон в загрузчике ИЛИ в fastbootd.
-#     bash 90-restore-stock.sh --i-understand [--all] [--set-active-a]
+#     bash 90-restore-stock.sh --i-understand [--all] [--set-active-a] [--accept-unverified-build]
 # =============================================================================
 set -Eeuo pipefail
 HERE=$(cd "$(dirname "$0")" && pwd)
-OK=0; ALL=0; SETA=0
+OK=0; ALL=0; SETA=0; UNVERIFIED=0
 for arg in "$@"; do
   case "$arg" in
     --i-understand) OK=1 ;; --all) ALL=1 ;; --set-active-a) SETA=1 ;;
+    --accept-unverified-build) UNVERIFIED=1 ;;
     *) echo "неизвестный аргумент: $arg"; exit 2 ;;
   esac
 done
@@ -37,23 +41,47 @@ FASTBOOT=${FASTBOOT:-$HOME/moto-tools/platform-tools/fastboot}
 LOG="$HOME/moto-kernel/restore-stock-$(date +%Y%m%d-%H%M%S).log"
 mkdir -p "$(dirname "$LOG")"
 exec > >(tee -a "$LOG") 2>&1
+# shellcheck source=expected/W1UI36H.39-25-11-4.env
+source "$HERE/expected/W1UI36H.39-25-11-4.env"
 # shellcheck source=lib-fastboot.sh
 source "$HERE/lib-fastboot.sh"
 die() { printf '\n=== ОСТАНОВКА: %s ===\nЖурнал: %s\n' "$*" "$LOG" >&2; exit 1; }
 
-( cd "$BAK" && sha256sum -c --quiet EXPECTED.txt ) || die "резервная копия не совпадает с эталоном — не используйте её"
+# Эталон берётся из репозитория, а не из каталога копии.
+( cd "$BAK" && sha256sum -c --quiet "$HERE/expected/W1UI36H.39-25-11-4.sha256" ) \
+  || die "резервная копия не совпадает с эталоном W1UI36H.39-25-11-4 — не используйте её"
 [[ $(fb_count) -eq 1 ]] || die "нужно ровно одно устройство fastboot"
-[[ "$(gv product)" == vienna && "$(gv sku)" == XT2409-5 ]] || die "это не vienna / XT2409-5"
+[[ "$(gv product)" == vienna && "$(gv sku)" == "$EXP_SKU" && "$(gv cid)" == "$EXP_CID" ]] || die "это не vienna / $EXP_SKU / CID $EXP_CID"
 MODE=$(gv is-userspace)
 [[ "$MODE" == yes || "$MODE" == no ]] || die "не удалось определить режим (is-userspace='$MODE')"
 
 echo "=== Текущее состояние ==="
 slot_report
 CUR=$(gv current-slot)
-if [[ "$CUR" != a ]]; then
+BLD=$(build_of_running_bootloader)
+echo "  работающий загрузчик относится к сборке: $BLD"
+if [[ "$CUR" == a ]]; then
+  # Слот A должен содержать именно W1UI36H.39-25-11-4: иначе (например, после
+  # OTA) образы этой копии не подходят и откат может испортить систему/данные.
+  if [[ "$BLD" != "$EXP_BUILD_ID" ]]; then
+    [[ $UNVERIFIED -eq 1 && "$BLD" == unknown ]] || die "слот A загружает сборку '$BLD', а копия — для $EXP_BUILD_ID. Откат запрещён.
+Если version-bootloader просто не читается (unknown), а вы уверены, что на A стоит $EXP_BUILD_ID,
+повторите с --accept-unverified-build."
+    echo "  ВНИМАНИЕ: сборка не подтверждена, продолжение по --accept-unverified-build"
+  fi
+else
   if [[ $SETA -ne 1 ]]; then
     die "current-slot=$CUR, ожидается a. Вероятно, загрузчик сам переключился на B после неудачных загрузок A.
 Повторите с флагом --set-active-a (будут восстановлены разделы A и активирован слот A)."
+  fi
+  # Ожидаемый сценарий: автоматический переход на старый слот B (Android 15).
+  # Какую версию тогда сообщает загрузчик (lk_b = V1UI35H… или lk_a = W1UI36H…),
+  # на устройстве не проверено, поэтому допустимы обе. Любая ДРУГАЯ сборка
+  # означает, скорее всего, установленное OTA: принудительный возврат запрещён.
+  if [[ "$BLD" != "$EXP_SLOT_B_BUILD" && "$BLD" != "$EXP_BUILD_ID" ]]; then
+    [[ $UNVERIFIED -eq 1 && "$BLD" == unknown ]] || die "в активном слоте $CUR загрузчик сборки '$BLD', ожидалась $EXP_SLOT_B_BUILD или $EXP_BUILD_ID.
+Возможно, установлено OTA. Принудительный возврат на A запрещён — нужна отдельная оценка ситуации."
+    echo "  ВНИМАНИЕ: сборка слота $CUR не читается, продолжение по --accept-unverified-build"
   fi
   [[ "$MODE" == no ]] || die "для смены слота запустите скрипт из загрузчика: $FASTBOOT reboot bootloader"
 fi

@@ -15,15 +15,10 @@ set -Euo pipefail
 ADB=${ADB:-$HOME/moto-tools/platform-tools/adb}
 OUT=${OUT:-$HOME/moto-kernel/diag-$(date +%Y%m%d-%H%M%S)}
 
-# Ожидаемые значения для сборки W1UI36H.39-25-11-4 (получены из пакета прошивки
-# с SHA-256 6bc78abc...f6a3, см. docs/01-source-audit.md).
+# Ожидаемые значения сборки W1UI36H.39-25-11-4 — общий файл проекта.
+# shellcheck source=expected/W1UI36H.39-25-11-4.env
+source "$(cd "$(dirname "$0")" && pwd)/expected/W1UI36H.39-25-11-4.env"
 EXPECT_KREL='6.1.157-android14-11-g14047afecd8b-ab16012876'
-EXPECT_VBMETA_DIGEST='9935ea56ba7359951d5856863727e3c45bce416cb6d18f36f215ebc9b63ccc23'
-EXPECT_FINGERPRINT='motorola/vienna_g_sys/vienna:16/W1UI36H.39-25-11-4/2734cd-58da6:user/release-keys'
-# Полная строка /proc/version стокового Image (содержит время сборки ядра).
-EXPECT_PROC_VERSION='Linux version 6.1.157-android14-11-g14047afecd8b-ab16012876 (build-user@build-host) (Android (10087095, +pgo, +bolt, +lto, -mlgo, based on r487747c) clang version 17.0.2 (https://android.googlesource.com/toolchain/llvm-project d9f89f4d16663d5012e5c09495f3b30ece3d2362), LLD 17.0.2) #1 SMP PREEMPT Tue Aug  4 11:44:32 UTC 2026'
-# Из system/etc/ramdisk/build.prop рамдиска init_boot.img.
-EXPECT_BOOTIMAGE_UTC='1788995558'
 
 die() { printf 'ОСТАНОВКА: %s\n' "$*" >&2; exit 1; }
 [[ -x "$ADB" ]] || die "не найден adb: $ADB"
@@ -105,20 +100,21 @@ vbs=$(g getprop ro.boot.verifiedbootstate)
 chk() { if [[ "$2" == "$3" ]]; then echo "СОВПАДАЕТ  $1"; else echo "ОТЛИЧАЕТСЯ $1: устройство='$2' ожидалось='$3'"; fi; }
 {
   echo "=== Проверка: установлена ли ровно та прошивка, которую мы анализировали ==="
-  chk "vbmeta (ro.boot.vbmeta.digest)          → vbmeta_a + vbmeta_system_a"   "$digest" "$EXPECT_VBMETA_DIGEST"
-  chk "ядро (/proc/version, со временем сборки) → boot_a"                       "$pver"   "$EXPECT_PROC_VERSION"
-  chk "init_boot (ro.bootimage.build.date.utc)  → init_boot_a"                  "$bi_utc" "$EXPECT_BOOTIMAGE_UTC"
+  chk "vbmeta (ro.boot.vbmeta.digest)          → vbmeta_a + vbmeta_system_a"   "$digest" "$EXP_VBMETA_DIGEST"
+  chk "ядро (/proc/version, со временем сборки) → boot_a"                       "$pver"   "$EXP_PROC_VERSION"
+  chk "init_boot (ro.bootimage.build.date.utc)  → init_boot_a"                  "$bi_utc" "$EXP_BOOTIMAGE_UTC"
   chk "dm-verity (ro.boot.veritymode)           → vendor/vendor_dlkm/… проверяются при чтении" "$vmode" "enforcing"
-  chk "ro.build.fingerprint" "$fp" "$EXPECT_FINGERPRINT"
+  chk "ro.build.fingerprint" "$fp" "$EXP_FINGERPRINT"
   echo "uname -r: $krel   активный слот: $slot   verifiedbootstate: $vbs"
   echo
-  echo "Что доказывают совпадения (загрузчик разблокирован = ORANGE, ошибки AVB не останавливают загрузку):"
-  echo " * vbmeta.digest — vbmeta_a и vbmeta_system_a побайтно как в пакете;"
-  echo " * veritymode=enforcing + успешная загрузка — прочитанные блоки vendor, vendor_dlkm, system_dlkm, system,"
-  echo "   system_ext, product соответствуют корням hashtree из этого vbmeta (иначе dm-verity дал бы ошибки чтения);"
-  echo " * /proc/version — работает ядро из стокового boot.img этой сборки;"
-  echo " * bootimage.date.utc — рамдиск init_boot этой сборки."
-  echo " vendor_boot_a и dtbo_a без root напрямую не проверяются (fastboot fetch запрещён на user-сборках);"
+  echo "Что подтверждают совпадения (загрузчик разблокирован = ORANGE: ошибки AVB не останавливают загрузку):"
+  echo " * vbmeta.digest — vbmeta_a и vbmeta_system_a побайтно как в пакете (криптографически);"
+  echo " * /proc/version — работает ядро с той же строкой сборки и временем компиляции (сильный признак,"
+  echo "   не побайтное сравнение boot.img);"
+  echo " * bootimage.date.utc — рамдиск init_boot с той же меткой сборки (признак, не побайтное сравнение);"
+  echo " * veritymode=enforcing + загрузка — блоки verity-разделов, прочитанные при работе, совпали с"
+  echo "   корнями hashtree этого vbmeta; непрочитанные блоки не проверялись."
+  echo " vendor_boot_a и dtbo_a без root не проверяются (fastboot fetch запрещён на user-сборках);"
   echo " их соответствие следует из журнала прошивки 30.10.2026 (OKAY, MD5 совпали)."
 } | tee "$OUT/00-SUMMARY.txt"
 

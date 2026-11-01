@@ -49,3 +49,25 @@ final_boot_prompt() {
     echo "Загрузка не выполнена. Телефон в загрузчике; продолжить вручную: $FASTBOOT reboot"
   fi
 }
+
+# gvm <key> — значение переменной, которое загрузчик Motorola может отдавать
+# частями: "key[0]: …", "key[1]: …" (с префиксом "(bootloader) " или без).
+# Части склеиваются по порядку; одиночное "key: value" тоже поддерживается.
+gvm() {
+  "$FASTBOOT" getvar "$1" 2>&1 | tr -d '\r' | awk -v k="$1" '
+    { sub(/^\(bootloader\) /, "") }
+    index($0, k ": ") == 1 { v = v substr($0, length(k) + 3); next }
+    index($0, k "[") == 1 { i = index($0, "]: "); if (i) v = v substr($0, i + 3) }
+    END { printf "%s", v }'
+}
+
+# build_of_running_bootloader — идентификатор сборки, к которой относится
+# работающий загрузчик (lk активного слота): EXP_BUILD_ID, EXP_SLOT_B_BUILD,
+# "other:<строка>" или "unknown" (если переменная не читается).
+build_of_running_bootloader() {
+  local v; v=$(gvm version-bootloader)
+  if [[ -z "$v" ]]; then echo unknown
+  elif [[ "$v" == *"$EXP_BUILD_ID"* ]]; then echo "$EXP_BUILD_ID"
+  elif [[ "$v" == *"$EXP_SLOT_B_BUILD"* ]]; then echo "$EXP_SLOT_B_BUILD"
+  else echo "other:$v"; fi
+}

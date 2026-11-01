@@ -19,21 +19,34 @@
 #      user-сборках запрещён) — опираемся на журнал прошивки 30.10.2026.
 #
 #  В телефон НИЧЕГО не пишется.  Результат: ~/moto-kernel/backup-W1UI36H.39-25-11-4/
-#  Использование:  bash 20-backup-stock.sh [путь-к-распакованной-прошивке]
+#  Использование:
+#     bash 20-backup-stock.sh [путь-к-распакованной-прошивке]   # копия + сверка
+#     bash 20-backup-stock.sh --recheck-only                    # только сверка (перед прошивкой)
+#  Маркер DEVICE-MATCH.txt создаётся ТОЛЬКО при успешной сверке с работающим
+#  телефоном; любой предыдущий маркер удаляется до начала сверки. Маркер
+#  содержит проверенные значения, время и хэш копии; 30-preflash-gate.sh
+#  принимает его не старше MATCH_MAX_AGE_MIN минут (по умолчанию 120).
 # =============================================================================
 set -Eeuo pipefail
 HERE=$(cd "$(dirname "$0")/../.." && pwd)
+DEV=$(cd "$(dirname "$0")" && pwd)
+# shellcheck source=expected/W1UI36H.39-25-11-4.env
+source "$DEV/expected/W1UI36H.39-25-11-4.env"
+EXPECTED_FILE="$DEV/expected/W1UI36H.39-25-11-4.sha256"
+RECHECK=0
+if [[ "${1:-}" == "--recheck-only" ]]; then RECHECK=1; shift; fi
 FW=${1:-$HOME/moto-firmware/extracted/VIENNA_G_SYS_W1UI36H.39_25_11_4_subsidy_DEFAULT_regulatory_DEFAULT_cid50_CFC.xml}
 ADB=${ADB:-$HOME/moto-tools/platform-tools/adb}
-HOSTTOOLS=${HOSTTOOLS:-$HOME/moto-kernel/hosttools}
 DST=${DST:-$HOME/moto-kernel/backup-W1UI36H.39-25-11-4}
-EXPECT_VBMETA_DIGEST='9935ea56ba7359951d5856863727e3c45bce416cb6d18f36f215ebc9b63ccc23'
 die() { printf 'ОСТАНОВКА: %s\n' "$*" >&2; exit 1; }
+mkdir -p "$DST"
+# Устаревший результат сверки никогда не переживает новый запуск.
+rm -f "$DST/DEVICE-MATCH.txt" "$DST/DEVICE-MISMATCH.txt"
 
+if [[ $RECHECK -eq 0 ]]; then
 [[ -f "$FW/flashfile.xml" ]] || die "не найден $FW/flashfile.xml"
 [[ "$(sha256sum "$FW/flashfile.xml" | cut -d' ' -f1)" == 17c2fad9875e021e35fef00e3e9f0bdaf96ed29f4874a7884fef130ca4a9a5fd ]] \
   || die "flashfile.xml не совпадает с проверенной копией"
-mkdir -p "$DST"
 
 echo "1/4 проверка MD5 нужных образов по flashfile.xml"
 python3 -I - "$FW" <<'EOF'
@@ -63,48 +76,70 @@ for f in boot init_boot vendor_boot dtbo vbmeta vbmeta_system; do cp -f "$FW/$f.
 echo "3/4 извлечение vendor_dlkm_a / system_dlkm_a из super"
 mapfile -t CH < <(ls "$FW"/super.img_sparsechunk.* | sort -t. -k3 -n)
 python3 -I "$HERE/tools/superimg.py" extract "${CH[@]}" -p vendor_dlkm_a -p system_dlkm_a -o "$DST" | tee "$DST/superimg-extract.log"
+fi
 
 echo "4/4 контрольные суммы и сверка с устройством"
+cp -f "$EXPECTED_FILE" "$DST/EXPECTED.txt"
+( cd "$DST" && sha256sum -c --quiet "$EXPECTED_FILE" ) || die "резервная копия не совпала с эталоном из репозитория"
 ( cd "$DST" && sha256sum ./*.img > SHA256SUMS )
-cat > "$DST/EXPECTED.txt" <<'EOF'
-# SHA-256 эталонных образов из пакета W1UI36H.39-25-11-4 (7z sha256 6bc78abc...f6a3)
-f8a5f539754947deeb54bf80a1927e93b5807c81f0fca7aab04cbc8ee25ac919  ./boot.img
-59b64d0e216cc3aa08f125799b52d89cb2d60029a155a80b564ed32e1d297ba8  ./init_boot.img
-5a0c47aaf3f9852d758de53901ab23411de1afca4706083d0b2f1531774bfa49  ./vendor_boot.img
-9a442cf2d48b02001c6a002ce03f29099edd1a41da1e5eb74492f91cf06feda6  ./dtbo.img
-654e7f9fcf3c7f18a4f3c143cb68fa16ae383f09960547ccaf55b0ded10405e3  ./vbmeta.img
-1528d9c7b325c1c3ac41a94b87f418523fd4e871a56b01a5f51e9903012754b9  ./vbmeta_system.img
-91a9ade67032c86c6c05c8a6a2daea9ae14a870c7f421b220cbbc45afd7bfcb0  ./vendor_dlkm_a.img
-917666e69954046a1c50e4c7031348618b4f660d258eead2bb8f1b6fd5121c42  ./system_dlkm_a.img
-EOF
-( cd "$DST" && sha256sum -c EXPECTED.txt ) || die "резервная копия не совпала с эталоном"
 
-if [[ -x "$ADB" ]] && "$ADB" get-state >/dev/null 2>&1; then
-  g() { "$ADB" shell "$@" 2>/dev/null | tr -d '\r'; }
-  dev=$(g getprop ro.boot.vbmeta.digest)
-  pver=$(g cat /proc/version)
-  bi_utc=$(g getprop ro.bootimage.build.date.utc)
-  vmode=$(g getprop ro.boot.veritymode)
-  slot=$(g getprop ro.boot.slot_suffix)
-  exp_pver=$(python3 -I "$HERE/tools/bootimg_kernel.py" "$DST/boot.img" || true)
-  exp_bi=1788995558
-  echo "   slot=$slot veritymode=$vmode"
-  res=0
-  [[ "$dev" == "$EXPECT_VBMETA_DIGEST" ]] && echo "   OK  vbmeta.digest" || { echo "   НЕТ vbmeta.digest=$dev"; res=1; }
-  [[ -n "$exp_pver" && "$pver" == "$exp_pver" ]] && echo "   OK  /proc/version = баннер стокового boot.img" || { echo "   НЕТ /proc/version='$pver'"; res=1; }
-  [[ "$bi_utc" == "$exp_bi" ]] && echo "   OK  ro.bootimage.build.date.utc" || { echo "   НЕТ bootimage.build.date.utc=$bi_utc"; res=1; }
-  [[ "$vmode" == enforcing ]] && echo "   OK  dm-verity enforcing" || { echo "   НЕТ veritymode=$vmode"; res=1; }
-  [[ "$slot" == _a ]] && echo "   OK  активный слот A" || { echo "   НЕТ слот=$slot"; res=1; }
-  if [[ $res -eq 0 ]]; then
-    { echo "СОВПАДАЕТ ($(date -Iseconds)): vbmeta/vbmeta_system, ядро boot_a, init_boot_a и verity-разделы"
-      echo "соответствуют этой копии; vendor_boot_a/dtbo_a — по журналу прошивки 30.10.2026."; } | tee "$DST/DEVICE-MATCH.txt"
-  else
-    echo "   НЕ СОВПАДАЕТ: на телефоне другая сборка/образы. Не используйте эту копию для отката!" | tee "$DST/DEVICE-MISMATCH.txt"
-    rm -f "$DST/DEVICE-MATCH.txt"
-    exit 2
-  fi
-else
-  echo "   adb недоступен — сверку с устройством выполните позже: adb shell getprop ro.boot.vbmeta.digest"
-  echo "   ожидается: $EXPECT_VBMETA_DIGEST"
+[[ -x "$ADB" ]] && "$ADB" get-state >/dev/null 2>&1 || die "adb недоступен: копия проверена, но сверка с телефоном НЕ выполнена, маркер DEVICE-MATCH не создан.
+Включите Android с отладкой USB и запустите: bash $0 --recheck-only"
+[[ $("$ADB" devices | awk 'NR>1 && $2=="device"' | wc -l) -eq 1 ]] || die "нужно ровно одно устройство adb"
+g() { "$ADB" shell "$@" 2>/dev/null | tr -d '\r'; }
+declare -A V=(
+  [vbmeta_digest]="$(g getprop ro.boot.vbmeta.digest)"
+  [proc_version]="$(g cat /proc/version)"
+  [bootimage_utc]="$(g getprop ro.bootimage.build.date.utc)"
+  [veritymode]="$(g getprop ro.boot.veritymode)"
+  [slot]="$(g getprop ro.boot.slot_suffix)"
+  [fingerprint]="$(g getprop ro.build.fingerprint)"
+  [flash_locked]="$(g getprop ro.boot.flash.locked)"
+  [vbmeta_device_state]="$(g getprop ro.boot.vbmeta.device_state)"
+  [carrier]="$(g getprop ro.carrier)"
+  [sku]="$(g getprop ro.boot.hardware.sku)"
+)
+exp_banner=$(python3 -I "$HERE/tools/bootimg_kernel.py" "$DST/boot.img")
+[[ "$exp_banner" == "$EXP_PROC_VERSION" ]] || die "баннер ядра в копии boot.img не равен ожидаемому (копия повреждена?)"
+res=0
+c() { if [[ "$2" == "$3" ]]; then echo "   OK  $1"; else echo "   НЕТ $1: '$2' (ожидалось '$3')"; res=1; fi; }
+c "vbmeta.digest (vbmeta_a + vbmeta_system_a)"      "${V[vbmeta_digest]}"  "$EXP_VBMETA_DIGEST"
+c "/proc/version = баннер ядра из копии boot.img"     "${V[proc_version]}"   "$EXP_PROC_VERSION"
+c "ro.bootimage.build.date.utc (init_boot)"         "${V[bootimage_utc]}"  "$EXP_BOOTIMAGE_UTC"
+c "ro.boot.veritymode"                              "${V[veritymode]}"     "enforcing"
+c "активный слот"                                    "${V[slot]}"           "_a"
+c "ro.build.fingerprint"                            "${V[fingerprint]}"    "$EXP_FINGERPRINT"
+c "ro.boot.flash.locked (загрузчик разблокирован)"  "${V[flash_locked]}"   "0"
+c "ro.boot.vbmeta.device_state"                     "${V[vbmeta_device_state]}" "unlocked"
+c "ro.carrier"                                      "${V[carrier]}"        "$EXP_CARRIER"
+[[ -n "${V[sku]}" ]] && echo "   (инфо) ro.boot.hardware.sku=${V[sku]}"
+
+if [[ $res -ne 0 ]]; then
+  echo "   НЕ СОВПАДАЕТ: на телефоне другая сборка/состояние. Не используйте эту копию для отката!" | tee "$DST/DEVICE-MISMATCH.txt"
+  exit 2
 fi
+{
+  echo "schema=1"
+  echo "build_id=$EXP_BUILD_ID"
+  echo "created_epoch=$(date +%s)"
+  echo "created_iso=$(date -Iseconds)"
+  echo "vbmeta_digest=${V[vbmeta_digest]}"
+  echo "proc_version_sha256=$(printf '%s' "${V[proc_version]}" | sha256sum | cut -d' ' -f1)"
+  echo "bootimage_utc=${V[bootimage_utc]}"
+  echo "veritymode=${V[veritymode]}"
+  echo "slot=${V[slot]}"
+  echo "fingerprint=${V[fingerprint]}"
+  echo "flash_locked=${V[flash_locked]}"
+  echo "vbmeta_device_state=${V[vbmeta_device_state]}"
+  echo "carrier=${V[carrier]}"
+  echo "expected_file_sha256=$(sha256sum "$EXPECTED_FILE" | cut -d' ' -f1)"
+  echo "backup_sha256sums_sha256=$(sha256sum "$DST/SHA256SUMS" | cut -d' ' -f1)"
+} > "$DST/DEVICE-MATCH.txt"
+cat <<EOF
+   СОВПАДАЕТ — маркер $DST/DEVICE-MATCH.txt (действует ограниченное время).
+   Уровень уверенности: vbmeta/vbmeta_system — побайтно (дайджест); ядро boot_a — по строке
+   сборки с временем компиляции; init_boot_a — по метке времени сборки; verity-разделы — блоки,
+   прочитанные при работе, проверены dm-verity по корням hashtree этого vbmeta. Полной побайтной
+   идентичности boot/init_boot/vendor_boot/dtbo это НЕ доказывает (без root невозможно).
+EOF
 echo "Готово: $DST  (телефон не изменялся)"
