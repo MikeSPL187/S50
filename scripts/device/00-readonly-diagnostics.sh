@@ -25,7 +25,7 @@ die() { printf 'ОСТАНОВКА: %s\n' "$*" >&2; exit 1; }
 mapfile -t DEVS < <("$ADB" devices | awk 'NR>1 && $2=="device"{print $1}')
 [[ ${#DEVS[@]} -eq 1 ]] || die "нужно ровно одно устройство в режиме adb 'device', найдено: ${#DEVS[@]}"
 mkdir -p "$OUT"
-REDACT='s/(serialno|serial|imei|meid|iccid|msisdn|esim|uid|chipid|cpuid|androidboot\.serialno)[^ ]*([=:] *)[^ ]+/\1\2<redacted>/Ig'
+REDACT='s/((serialno|serial|imei[0-9]*|meid|iccid|msisdn|esim|eid|chipid|cpuid|(androidboot|ro\.boot)\.uid|wifimac|btmac|bt_addr|bdaddr|macaddr|mac_addr|wlan_mac|barcode|psn)[^[:space:]=:]*[[:space:]]*[=:][[:space:]]*)("[^"]*"|[^[:space:]]+)/\1<redacted>/Ig'
 
 # run <file> <adb shell command...>  — never aborts the script
 run() {
@@ -117,6 +117,14 @@ chk() { if [[ "$2" == "$3" ]]; then echo "СОВПАДАЕТ  $1"; else echo "О
   echo " vendor_boot_a и dtbo_a без root не проверяются (fastboot fetch запрещён на user-сборках);"
   echo " их соответствие следует из журнала прошивки 30.10.2026 (OKAY, MD5 совпали)."
 } | tee "$OUT/00-SUMMARY.txt"
+
+# Точный серийный номер устройства вычищается из всех файлов (дополнительно к шаблону).
+SER=$("$ADB" get-serialno 2>/dev/null | tr -d '\r')
+if [[ "$SER" =~ ^[A-Za-z0-9]{6,}$ ]]; then
+  sed -i "s/$SER/<redacted-serial>/g" "$OUT"/*.txt
+fi
+left=$(grep -rIl -E '([0-9A-Fa-f]{2}:){5}[0-9A-Fa-f]{2}' "$OUT" 2>/dev/null | xargs -r -n1 basename | tr '\n' ' ')
+[[ -n "$left" ]] && echo "ВНИМАНИЕ: похожие на MAC-адреса строки остались в: $left — проверьте перед отправкой."
 
 ( cd "$OUT" && sha256sum ./*.txt > SHA256SUMS )
 echo
