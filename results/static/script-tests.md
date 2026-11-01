@@ -59,3 +59,20 @@
 | `90 --set-active-a`, слот B, загрузчик V1UI35H или W1UI36H | vbmeta_a → set-active a → fastbootd → vendor_dlkm_a → загрузчик |
 | `90 --set-active-a`, слот B с другой сборкой (OTA) | ОСТАНОВКА, записей нет |
 | `40`, полный цикл со свежим маркером, загрузка отклонена | vbmeta_a → fastbootd → vendor_dlkm_a → загрузчик |
+
+## Тесты после третьей рецензии (01.11.2026)
+
+Имитатор `fastboot` в режиме fastbootd теперь, как AOSP, не отдаёт `sku`, `cid`, `securestate`, `ro.carrier`,
+`slot-retry-count`. Имитатор `adb` для отката воспроизводит работающий Android с заданными свойствами.
+
+| Сценарий | Результат |
+|---|---|
+| `40`, полный цикл | журнал: `prepared` (с ожидаемым vbmeta.digest эксперимента) → `vbmeta_a_written` → `vendor_dlkm_a_written` |
+| `90` запущен из fastbootd, слот A, журнал активен | `reboot bootloader` → проверки → vbmeta_a → fastbootd → vendor_dlkm_a → загрузчик; журнал `restored` |
+| `90`, слот A, журнал закрыт, adb нет | ОСТАНОВКА (состояние неизвестно) |
+| то же с `--accept-unverified-state` | восстановление |
+| `90 --set-active-a`, слот B `successful=yes` (как после OTA), даже с обходом | ОСТАНОВКА, записей нет |
+| `90 --set-active-a`, слот B не successful, журнал активен, загрузчик V1UI35H | vbmeta_a → set-active a → fastbootd → vendor_dlkm_a |
+| `90`, Android работает, digest эксперимента из журнала | подтверждение → `adb reboot bootloader` → восстановление |
+| `90`, Android работает с другой сборкой | ОСТАНОВКА, записей нет |
+| `90`, Android работает, digest неизвестен | ОСТАНОВКА, записей нет |
