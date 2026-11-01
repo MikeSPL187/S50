@@ -45,6 +45,12 @@
    `iowait_boost_enable=Y`) → `profile-patched-default-*`. Ожидание: **нет измеримой разницы** со стоком
    (0002 по умолчанию идентичен стоку; 0001 почти не проявляется при 0–10 мкс). Это контроль регрессий.
 3. Эксперименты (нужен root для переключения): U3 (`iowait_boost_enable=N`), U2+0001 и т. д. — по одному.
+   Без root есть два возможных пути (оба требуют проверки): (а) вариант образа `vendor_dlkm` с файлом
+   `lib/modules/modules.options` (`options cpufreq_sugov_ext iowait_boost_enable=0`) — libmodprobe читает этот
+   файл (проверено по исходникам AOSP), но MTK грузит модули своим `init.insmod.sh`, и какой `modprobe` он вызывает,
+   покажет `23-module-loading.txt` диагностики; переключение тогда требует перепрошивки `vendor_dlkm`;
+   (б) параметры модуля в cmdline ядра (libmodprobe их тоже разбирает), если `fastboot oem config cmdl` на этом
+   загрузчике работает — не проверено.
 4. Анализ: `python3 tools/analyze_profile.py <A> <B>` — медианы, p90, U-тест Манна–Уитни; «значимо» только при
    p < 0,05 **и** |Δмедианы| ≥ 3 %.
 

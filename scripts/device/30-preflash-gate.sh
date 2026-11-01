@@ -20,7 +20,8 @@ FAIL=0
 ok()   { printf '  [OK]   %s\n' "$*"; }
 bad()  { printf '  [СТОП] %s\n' "$*"; FAIL=1; }
 warn() { printf '  [ВНИМ] %s\n' "$*"; }
-gv() { local l; l=$("$FASTBOOT" getvar "$1" 2>&1 | tr -d '\r' | grep -F -- "$1: " | head -n1); printf '%s' "${l#*: }"; }
+# shellcheck source=lib-fastboot.sh
+source "$HERE/scripts/device/lib-fastboot.sh"
 
 echo "== Артефакт: $ART"
 [[ -f "$ART/vendor_dlkm.img" && -f "$ART/vbmeta.img" && -f "$ART/SHA256SUMS" ]] || { bad "нет vendor_dlkm.img/vbmeta.img/SHA256SUMS"; }
@@ -47,18 +48,19 @@ v=$(gv cid);           [[ "$v" == 0x000B ]]   && ok "cid=$v (аппаратны�
 v=$(gv ro.carrier);    [[ "$v" == teleu ]]    && ok "ro.carrier=$v" || warn "ro.carrier=$v"
 v=$(gv is-userspace);  [[ "$v" == no ]]       && ok "режим загрузчика (не fastbootd)" || bad "is-userspace=$v (нужен загрузчик)"
 v=$(gv current-slot);  [[ "$v" == a ]]        && ok "current-slot=a (артефакт рассчитан на _a)" || bad "current-slot=$v"
-v=$(gv slot-successful:_a); [[ "$v" == yes ]] && ok "slot-successful:_a=yes" || warn "slot-successful:_a=$v"
+v=$(gv slot-successful:_a); [[ "$v" == yes ]] && ok "slot-successful:_a=yes (A уже успешно загружался)" || bad "slot-successful:_a=$v — сначала добейтесь успешной загрузки стока"
 v=$(gv slot-unbootable:_a); [[ "$v" == no ]]  && ok "slot-unbootable:_a=no" || bad "slot-unbootable:_a=$v"
 v=$(gv securestate);   [[ "$v" == *unlock* ]] && ok "securestate=$v" || warn "securestate='$v' — убедитесь, что загрузчик РАЗБЛОКИРОВАН (ro.boot.flash.locked=0)"
 v=$(gv has-slot:vbmeta); [[ "$v" == yes ]]    && ok "has-slot:vbmeta=yes" || warn "has-slot:vbmeta=$v"
 v=$(gv snapshot-update-status); [[ -z "$v" || "$v" == none ]] && ok "snapshot-update-status=${v:-<пусто>} (нет незавершённого OTA)" || bad "snapshot-update-status=$v — незавершённое OTA, не прошивать"
 echo "  (инфо) version-bootloader: $(gv version-bootloader)"
+echo "  (инфо) слоты:"; slot_report
 
 echo
 if [[ $FAIL -eq 0 ]]; then
   echo "ПРЕДПОЛЁТНАЯ ПРОВЕРКА ПРОЙДЕНА. Ничего не изменено."
   echo "Следующий шаг выполняется ТОЛЬКО вручную и только после вашего решения:"
-  echo "   bash 40-flash-experimental-vendor-dlkm.sh '$ART'"
+  echo "   bash 40-flash-experimental-vendor-dlkm.sh '$ART' --i-understand"
 else
   echo "ПРОВЕРКА НЕ ПРОЙДЕНА. Прошивка запрещена. Ничего не изменено."
 fi

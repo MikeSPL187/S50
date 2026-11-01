@@ -1,5 +1,17 @@
 # Журнал изменений
 
+## 2026-11-01 — исправления по внешней рецензии
+
+* `90-restore-stock.sh`: останов при `current-slot≠a`; режим `--set-active-a` для случая автопереключения на
+  непригодный слот B; запуск из загрузчика или fastbootd; без автозагрузки системы.
+* `40-flash-experimental-vendor-dlkm.sh`: после записи возврат в загрузчик и загрузка только по фразе `BOOT`.
+* `30-preflash-gate.sh`: `slot-successful:_a=yes` обязателен; вывод состояния обоих слотов.
+* Общие функции fastboot вынесены в `scripts/device/lib-fastboot.sh`.
+* Исправлена переоценка в документации: при ORANGE совпадение `vbmeta.digest` не доказывает содержимое
+  `boot`/`vendor_boot`; сверка дополнена `/proc/version`, `ro.bootimage.build.date.utc`, `ro.boot.veritymode`
+  (`tools/bootimg_kernel.py`, `00`, `20`).
+* Диагностика механизма загрузки модулей MTK (путь к A/B без root через `modules.options`).
+
 ## 2026-11-01 — этап 1 (сборка W1UI36H.39-25-11-4)
 
 * Найдены исходники точной сборки; доказано соответствие ядра (GKI android14-6.1-2025-12_r29) и vendor-модулей.

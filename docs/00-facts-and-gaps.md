@@ -66,7 +66,7 @@ guarded runner и полный журнал прошивки от 30.10.2026).
 
 | Нужно | Зачем | Как получить (без root) |
 |---|---|---|
-| `uname -r`, `ro.boot.vbmeta.digest` с телефона | доказать, что на телефоне именно анализированные образы | `scripts/device/00-readonly-diagnostics.sh` |
+| `/proc/version`, `ro.boot.vbmeta.digest`, `ro.bootimage.build.date.utc`, `ro.boot.veritymode` с телефона | подтвердить, что на телефоне именно анализированные образы (при ORANGE одного `vbmeta.digest` недостаточно — см. 06, раздел 2) | `scripts/device/00-readonly-diagnostics.sh` |
 | Текущие `sugov_ext/*rate_limit_us`, таблицы частот, cpuidle, zram, PSI, термозоны | базовая линия и оценка эффекта патчей | тот же скрипт |
 | Объём RAM/UFS этого экземпляра | конфигурация модели не определена (12 ГБ по каталогу Lenovo) | `/proc/meminfo` в диагностике; `fastboot getvar all` (ram/ufs) |
 | Базовые замеры UX/энергии/температуры | без них нельзя утверждать улучшение | `scripts/device/10-baseline-profile.sh` |

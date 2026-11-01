@@ -21,9 +21,22 @@ Root нет, поэтому разделы нельзя прочитать с т
 1. `scripts/device/20-backup-stock.sh` копирует `boot`, `init_boot`, `vendor_boot`, `dtbo`, `vbmeta`, `vbmeta_system`
    из **того же пакета**, извлекает `vendor_dlkm_a`/`system_dlkm_a` из `super`, сверяет SHA-256 с эталонами
    (`EXPECTED.txt`).
-2. Скрипт сравнивает `ro.boot.vbmeta.digest` телефона с вычисленным из пакета
-   `9935ea56…cc23`. Дайджест покрывает хэши `boot/init_boot/vendor_boot/dtbo` и корни hashtree всех
-   verity-разделов. **Совпадение доказывает, что копия = установленные образы.** Без `DEVICE-MATCH.txt`
+2. Скрипт сверяет копию с работающим телефоном (adb, без root). **Поправка к первой версии:** при
+   разблокированном загрузчике (ORANGE) ошибка хэша `boot`/`vendor_boot` не останавливает загрузку, поэтому
+   совпадение одного `ro.boot.vbmeta.digest` доказывает только идентичность `vbmeta_a`/`vbmeta_system_a`.
+   Поэтому проверяется набор независимых признаков:
+
+   | Признак (без root) | Что доказывает |
+   |---|---|
+   | `ro.boot.vbmeta.digest = 9935ea56…cc23` | `vbmeta_a`, `vbmeta_system_a` = пакет |
+   | `/proc/version` = баннер ядра из `boot.img` пакета (со временем сборки) | работает ядро стокового `boot_a` |
+   | `ro.bootimage.build.date.utc = 1788995558` | рамдиск `init_boot_a` этой сборки |
+   | `ro.boot.veritymode = enforcing` + система загружена | прочитанные блоки `vendor_dlkm`, `vendor` и др. соответствуют корням hashtree этого vbmeta |
+   | слот `_a` | копия относится к активному слоту |
+
+   `vendor_boot_a` и `dtbo_a` без root проверить нельзя: `fastboot fetch` в fastbootd запрещён на user-сборках
+   (проверено по исходникам AOSP `fastboot/device/commands.cpp`). Их соответствие следует из журнала прошивки
+   30.10.2026 (OKAY, MD5 совпали). Экспериментальная установка эти разделы не меняет. Без `DEVICE-MATCH.txt`
    предполётная проверка запрещает запись.
 3. Хранить копию минимум в двух местах (Steam Deck + внешний носитель); полный 7z-пакет тоже сохранить.
 
@@ -32,7 +45,8 @@ Root нет, поэтому разделы нельзя прочитать с т
 `scripts/device/30-preflash-gate.sh <артефакт>` в режиме загрузчика проверяет: SHA артефакта; валидность hashtree;
 что vbmeta отличается от стока **только** дескриптором `vendor_dlkm`; совпадение корневого дайджеста; целостность
 резервной копии и `DEVICE-MATCH`; `product=vienna`, `sku=XT2409-5`, `cid=0x000B`, `current-slot=a`,
-`slot-unbootable:_a=no`, отсутствие незавершённого OTA (`snapshot-update-status`), состояние разблокировки.
+`slot-successful:_a=yes`, `slot-unbootable:_a=no`, отсутствие незавершённого OTA (`snapshot-update-status`),
+состояние разблокировки; выводит счётчики попыток обоих слотов.
 
 ## 4. Процедура экспериментальной установки (выполняет только пользователь)
 
@@ -45,24 +59,39 @@ bash scripts/device/40-flash-experimental-vendor-dlkm.sh ~/moto-kernel/out/artif
 Порядок внутри скрипта и почему он такой:
 
 1. `fastboot flash vbmeta_a` (загрузчик). Если сбой — `vendor_dlkm` ещё стоковый; вернуть стоковый vbmeta.
-2. `fastboot reboot fastboot` → fastbootd (recovery-рамдиск из `vendor_boot`, **не зависит** от `vendor_dlkm`).
+2. `fastboot reboot fastboot` → fastbootd (recovery-рамдиск из `vendor_boot`, **не зависит** от `vendor_dlkm`);
+   проверка `current-slot=a`.
 3. `fastboot flash vendor_dlkm_a`.
-4. `fastboot reboot`.
+4. `fastboot reboot bootloader` — **система не загружается автоматически.** Скрипт показывает состояние слотов;
+   в этот момент ещё можно вернуть сток (`90-restore-stock.sh`), не загружая модифицированную систему.
+5. Загрузка системы — только после отдельного ввода `BOOT`.
 
 `fastboot boot` не используется (сторонний отчёт: отсутствует на vienna; не проверено на XT2409-5).
 `boot` не прошивается, поэтому сторонне описанная «предварительная проверка boot по vbmeta» не затрагивается.
 
 ## 5. Откат
 
-Из загрузчика (Питание + Громкость вниз):
+Из загрузчика (Питание + Громкость вниз) **или** из fastbootd:
 
 ```
-bash scripts/device/90-restore-stock.sh --i-understand          # vbmeta_a + vendor_dlkm_a
-bash scripts/device/90-restore-stock.sh --i-understand --all    # + boot/init_boot/vendor_boot/dtbo/vbmeta_system/system_dlkm (слот A)
+bash scripts/device/90-restore-stock.sh --i-understand                 # vbmeta_a + vendor_dlkm_a
+bash scripts/device/90-restore-stock.sh --i-understand --all           # + boot/init_boot/vendor_boot/dtbo/vbmeta_system/system_dlkm (слот A)
+bash scripts/device/90-restore-stock.sh --i-understand --set-active-a  # если загрузчик сам переключился на слот B
 ```
 
-После отката `00-readonly-diagnostics.sh` должен показать `ro.boot.vbmeta.digest = 9935ea56…cc23` — это
-доказательство полного возврата к стоку.
+**Слот B не является запасным.** После прошивки 30.10 разделы `*_b` загрузочной цепочки остались от Android 15,
+а в `super` у слота B нет `vendor_b`, `vendor_dlkm_b`, `product_b`, `system_ext_b` (размер 0). Если
+модифицированный слот A не загрузится 7 раз подряд (`slot-retry-count:_a=7`), загрузчик может пометить A как
+unbootable и переключиться на B — Android 16 с B не запустится, телефон останется в загрузчике. Поэтому
+скрипт отката:
+
+* **останавливается**, если `current-slot` не `a`;
+* с явным флагом `--set-active-a` восстанавливает разделы A, выполняет `fastboot --set-active=a` **до** входа в
+  fastbootd (чтобы recovery запустился из стокового слота A), затем пишет `vendor_dlkm_a`;
+* в конце возвращается в загрузчик, показывает состояние слотов и загружает систему только после ввода `BOOT`.
+
+После отката `00-readonly-diagnostics.sh` должен показать совпадение всех признаков из раздела 2
+(`vbmeta.digest = 9935ea56…cc23`, `/proc/version`, `bootimage.build.date.utc`, `veritymode`).
 
 Если fastbootd недоступен: стоковый `vbmeta_a` всё равно восстанавливается из загрузчика; для `vendor_dlkm_a`
 последний резерв — сервисная прошивка `servicefile.xml` (не стирает userdata), **но** она снова пишет GPT и
@@ -86,6 +115,8 @@ preloader и стирает `nvdata`; применять только осозн
 | Загрузчик не принимает vbmeta с чужим ключом | низкая (libavb, unlocked) / запись отклонена, ничего не изменено | скрипт останавливается до записи `vendor_dlkm` |
 | fastbootd не поддерживает запись `vendor_dlkm_a` | низкая / запись отклонена | восстановить стоковый `vbmeta_a` |
 | Ошибка в модуле → нет загрузки | низкая (код = сток + 2 изолированных изменения, KMI-gate пройден) / bootloop | откат из загрузчика + fastbootd |
+| После 7 неудачных загрузок загрузчик переключается на непригодный слот B | возможна при bootloop / телефон в загрузчике | `90-restore-stock.sh --set-active-a` |
+| Аварийный путь (fastbootd, приём vbmeta с чужим ключом) не проверен на этом телефоне | неизвестна / может потребоваться сервисная прошивка | проверено только на имитаторе; первая установка — при полностью заряженном телефоне и готовом пакете прошивки |
 | Неверные метки SELinux в `vendor_dlkm` | исключено проверкой файл-в-файл | `make-vendor-dlkm.sh` прерывается при любом расхождении |
 | OTA не ставится | высокая при модификации / неудобство | откат перед OTA |
 | Перегрев/потеря термозащиты | не затрагивается | термо-модули и лимиты не менялись |

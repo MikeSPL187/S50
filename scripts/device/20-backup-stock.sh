@@ -7,11 +7,16 @@
 #   1) берём образы из того самого пакета прошивки, который был установлен
 #      (проверяем MD5 из flashfile.xml и SHA-256 эталонов);
 #   2) извлекаем vendor_dlkm_a / system_dlkm_a из super (tools/superimg.py);
-#   3) доказываем, что телефон работает ровно на этих образах: сравниваем
-#      ro.boot.vbmeta.digest (adb, без root) с дайджестом, вычисленным из
-#      vbmeta.img + vbmeta_system.img пакета. Дайджест покрывает хэши boot,
-#      init_boot, vendor_boot, dtbo и корни hashtree vendor_dlkm, system_dlkm,
-#      vendor, product, system, system_ext.
+#   3) сверяем с работающим телефоном (adb, без root):
+#      - ro.boot.vbmeta.digest  → vbmeta_a и vbmeta_system_a = пакет;
+#      - /proc/version целиком  → ядро boot_a = пакет;
+#      - ro.bootimage.build.date.utc → рамдиск init_boot_a = пакет;
+#      - ro.boot.veritymode=enforcing → verity-разделы (vendor_dlkm и др.)
+#        проверяются dm-verity по корням hashtree из этого vbmeta.
+#      Загрузчик разблокирован (ORANGE): ошибка хэша boot/vendor_boot НЕ
+#      остановила бы загрузку, поэтому одного vbmeta.digest недостаточно.
+#      vendor_boot_a и dtbo_a без root не проверяются (fastboot fetch на
+#      user-сборках запрещён) — опираемся на журнал прошивки 30.10.2026.
 #
 #  В телефон НИЧЕГО не пишется.  Результат: ~/moto-kernel/backup-W1UI36H.39-25-11-4/
 #  Использование:  bash 20-backup-stock.sh [путь-к-распакованной-прошивке]
@@ -75,14 +80,27 @@ EOF
 ( cd "$DST" && sha256sum -c EXPECTED.txt ) || die "резервная копия не совпала с эталоном"
 
 if [[ -x "$ADB" ]] && "$ADB" get-state >/dev/null 2>&1; then
-  dev=$("$ADB" shell getprop ro.boot.vbmeta.digest | tr -d '\r')
-  krel=$("$ADB" shell uname -r | tr -d '\r')
-  slot=$("$ADB" shell getprop ro.boot.slot_suffix | tr -d '\r')
-  echo "   устройство: vbmeta.digest=$dev  uname -r=$krel  slot=$slot"
-  if [[ "$dev" == "$EXPECT_VBMETA_DIGEST" ]]; then
-    echo "   СОВПАДАЕТ: телефон работает ровно на образах из этой резервной копии." | tee "$DST/DEVICE-MATCH.txt"
+  g() { "$ADB" shell "$@" 2>/dev/null | tr -d '\r'; }
+  dev=$(g getprop ro.boot.vbmeta.digest)
+  pver=$(g cat /proc/version)
+  bi_utc=$(g getprop ro.bootimage.build.date.utc)
+  vmode=$(g getprop ro.boot.veritymode)
+  slot=$(g getprop ro.boot.slot_suffix)
+  exp_pver=$(python3 -I "$HERE/tools/bootimg_kernel.py" "$DST/boot.img" || true)
+  exp_bi=1788995558
+  echo "   slot=$slot veritymode=$vmode"
+  res=0
+  [[ "$dev" == "$EXPECT_VBMETA_DIGEST" ]] && echo "   OK  vbmeta.digest" || { echo "   НЕТ vbmeta.digest=$dev"; res=1; }
+  [[ -n "$exp_pver" && "$pver" == "$exp_pver" ]] && echo "   OK  /proc/version = баннер стокового boot.img" || { echo "   НЕТ /proc/version='$pver'"; res=1; }
+  [[ "$bi_utc" == "$exp_bi" ]] && echo "   OK  ro.bootimage.build.date.utc" || { echo "   НЕТ bootimage.build.date.utc=$bi_utc"; res=1; }
+  [[ "$vmode" == enforcing ]] && echo "   OK  dm-verity enforcing" || { echo "   НЕТ veritymode=$vmode"; res=1; }
+  [[ "$slot" == _a ]] && echo "   OK  активный слот A" || { echo "   НЕТ слот=$slot"; res=1; }
+  if [[ $res -eq 0 ]]; then
+    { echo "СОВПАДАЕТ ($(date -Iseconds)): vbmeta/vbmeta_system, ядро boot_a, init_boot_a и verity-разделы"
+      echo "соответствуют этой копии; vendor_boot_a/dtbo_a — по журналу прошивки 30.10.2026."; } | tee "$DST/DEVICE-MATCH.txt"
   else
     echo "   НЕ СОВПАДАЕТ: на телефоне другая сборка/образы. Не используйте эту копию для отката!" | tee "$DST/DEVICE-MISMATCH.txt"
+    rm -f "$DST/DEVICE-MATCH.txt"
     exit 2
   fi
 else

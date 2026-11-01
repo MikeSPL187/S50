@@ -28,7 +28,7 @@ Android 16 **W1UI36H.39-25-11-4** (TELEU, патч 2026-09-01), загрузчи
 | [manifest/sources.lock](manifest/sources.lock) | точные коммиты всех исходников и тулчейна |
 | [scripts/host/](scripts/host) | загрузка исходников/тулчейна, сборка GKI и модулей, упаковка `vendor_dlkm`/vbmeta, анализ прошивки, полный конвейер |
 | [scripts/device/](scripts/device) | для Steam Deck: `00` диагностика (read-only) · `10` замеры · `20` резервная копия · `30` предполётная проверка · `40` установка (ручная, с подтверждением) · `90` откат |
-| [tools/](tools) | `superimg.py`, `kmi_check.py`, `ko_compare.py`, `ko2symvers.py`, `erofs_meta.py`, `vbmeta_diff.py`, `analyze_profile.py` |
+| [tools/](tools) | `superimg.py`, `kmi_check.py`, `ko_compare.py`, `ko2symvers.py`, `erofs_meta.py`, `vbmeta_diff.py`, `bootimg_kernel.py`, `analyze_profile.py` |
 | [results/](results) | журналы и отчёты: инвентаризация прошивки, сборка, KMI, воспроизводимость, checkpatch, проверка артефакта |
 | `Containerfile`, [ci/](ci) | среда сборки для SteamOS (podman) и шаблон GitHub Actions |
 
@@ -37,7 +37,7 @@ Android 16 **W1UI36H.39-25-11-4** (TELEU, патч 2026-09-01), загрузчи
 ```bash
 git clone -b ccr-8fd37226-yb83cu https://github.com/MikeSPL187/S50 ~/moto-s50-kernel && cd ~/moto-s50-kernel
 bash scripts/device/00-readonly-diagnostics.sh      # телефон в Android, отладка USB включена
-bash scripts/device/20-backup-stock.sh              # копия стоковых образов + сверка vbmeta.digest
+bash scripts/device/20-backup-stock.sh              # копия стоковых образов + сверка с телефоном (vbmeta, ядро, init_boot, dm-verity)
 bash scripts/device/10-baseline-profile.sh stock-run1
 ```
 
