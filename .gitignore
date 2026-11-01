@@ -1,0 +1,7 @@
+# build outputs / local data never committed
+__pycache__/
+*.pyc
+/out/
+/work/
+*.img
+*.pem

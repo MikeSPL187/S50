@@ -1,0 +1,22 @@
+# Exact source pins for Motorola Moto S50 (XT2409-5) build W1UI36H.39-25-11-4
+# Generated 2026-11-01T15:02:19Z by git ls-remote; format: <repo-url> <ref> <peeled-commit>
+https://github.com/MotorolaMobilityLLC/kernel-mtk refs/tags/MMI-W1UI36H.39-25-11-4 19769679e8a885528e4a5631a1d9551b957abfe7
+https://github.com/MotorolaMobilityLLC/kernel-kernel_device_modules-6.1 refs/tags/MMI-W1UI36H.39-25-11-4 700ad8d4c3acd763c184c799c014f001fcf115db
+https://github.com/MotorolaMobilityLLC/motorola-kernel-modules refs/tags/MMI-W1UI36H.39-25-11-4 3c95814604e4176ced5a13448f76271ec73269cf
+https://github.com/MotorolaMobilityLLC/kernel-build-bazel_mgk_rules refs/tags/MMI-W1UI36H.39-25-11-4 1f867d45b95c961b8a0195538574c096611f9b2e
+https://github.com/MotorolaMobilityLLC/vendor-mediatek-kernel_modules-gpu refs/tags/MMI-W1UI36H.39-25-11-4 e28547ee52bba66b79a030e54c914bb686c2b5ae
+https://github.com/MotorolaMobilityLLC/vendor-mediatek-kernel_modules-mtkcam refs/tags/MMI-W1UI36H.39-25-11-4 a34eadbca206cfbaed822c22cbdeee01e77b09cf
+https://github.com/MotorolaMobilityLLC/vendor-mediatek-kernel_modules-connectivity-wlan-core-gen4m refs/tags/MMI-W1UI36H.39-25-11-4 3bb512fcacd1d1828ce5804d2b119ec02c54536e
+https://github.com/MotorolaMobilityLLC/vendor-mediatek-kernel_modules-connectivity-bt-mt66xx refs/tags/MMI-W1UI36H.39-25-11-4 be6f505ee6c7a7333e817e1e47f598b551289406
+https://github.com/MotorolaMobilityLLC/vendor-mediatek-kernel_modules-connectivity-bt-linux_v2 refs/tags/MMI-W1UI36H.39-25-11-4 502cc1c3719be1684e6f187a5262fe251c97a6a9
+https://github.com/MotorolaMobilityLLC/vendor-mediatek-kernel_modules-connectivity-common refs/tags/MMI-W1UI36H.39-25-11-4 7e965f6c2c5bfba2376d5105583f3391084486de
+https://github.com/MotorolaMobilityLLC/vendor-mediatek-kernel_modules-connectivity-conninfra refs/tags/MMI-W1UI36H.39-25-11-4 079962ce4761aa7289cbaff9e4404f2c59c33d23
+https://github.com/MotorolaMobilityLLC/vendor-mediatek-kernel_modules-connectivity-connfem refs/tags/MMI-W1UI36H.39-25-11-4 a82b775668448180519863876edbb402a92c8e85
+https://github.com/MotorolaMobilityLLC/vendor-mediatek-kernel_modules-connectivity-gps refs/tags/MMI-W1UI36H.39-25-11-4 011fabc59111ca7d23969029cb110deb2671d791
+https://github.com/MotorolaMobilityLLC/vendor-mediatek-kernel_modules-connectivity-fmradio refs/tags/MMI-W1UI36H.39-25-11-4 18698e9a6cae0d8f1d97532dabfc92c8c45823cc
+https://github.com/MotorolaMobilityLLC/vendor-mediatek-kernel_modules-connectivity-wlan-adaptor refs/tags/MMI-W1UI36H.39-25-11-4 9f5b833b62720fa948289e1a1c252ee9c5385ef6
+https://github.com/MotorolaMobilityLLC/vendor-mediatek-kernel_modules-hbt_driver_cus refs/tags/MMI-W1UI36H.39-25-11-4 2292374b45fc442a606814095b98c114dde2c7e4
+https://android.googlesource.com/kernel/common refs/tags/android14-6.1-2025-12_r29 14047afecd8bfcb7685edf2d88bb65bbffa31f25
+https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86 refs/heads/main-kernel-build-2023:clang-r487747c 382db94fa9597402b69e252c36bf9902cc283b82
+https://android.googlesource.com/platform/external/avb refs/heads/main 761178607206f4cb2af79ed9eec52d8cbd814adb
+https://android.googlesource.com/platform/system/tools/mkbootimg refs/heads/main d2bb0af5ba6d3198a3e99529c97eda1be0b5a093

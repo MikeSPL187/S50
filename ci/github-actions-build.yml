@@ -1,0 +1,44 @@
+# Optional CI build (GitHub Actions).  Copy to .github/workflows/build.yml to
+# enable.  Manual trigger only.  It rebuilds the GKI kernel and the MTK
+# scheduler modules (stock + patched) from the pinned sources and uploads the
+# modules and logs.  The KMI / reproducibility gates need the stock firmware
+# images, which are NOT stored in this repository; run them locally with
+# scripts/host/build-all.sh.
+name: build-s50-kernel-modules
+on:
+  workflow_dispatch: {}
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - name: Free disk space
+        run: sudo rm -rf /usr/share/dotnet /usr/local/lib/android /opt/ghc /opt/hostedtoolcache/CodeQL && df -h /
+      - name: Host packages
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y bc bison flex libssl-dev libelf-dev dwarves cpio lz4 kmod rsync erofs-utils
+      - name: Toolchain and sources (pinned)
+        run: |
+          scripts/host/setup-toolchain.sh "$HOME/w"
+          scripts/host/fetch-sources.sh "$HOME/w/src"
+      - name: Stock IKCONFIG (committed copy, extracted from stock boot.img)
+        run: cp results/firmware/stock-kernel-ikconfig.txt "$HOME/w/stock.config"
+      - name: GKI build
+        run: CLANG_DIR="$HOME/w/clang-r487747c" scripts/host/build-gki.sh "$HOME/w/src/common" "$HOME/w/out/gki" "$HOME/w/stock.config"
+      - name: MTK scheduler modules (stock + patched)
+        run: |
+          for v in kdm kdm-patched; do
+            CLANG_DIR="$HOME/w/clang-r487747c" scripts/host/build-mtk-modules.sh "$HOME/w/src/kernel-mtk" "$HOME/w/src/$v" \
+              "$HOME/w/out/mgk" "$HOME/w/out/mtk-$v" "$HOME/w/out/gki/Module.symvers" \
+              results/firmware/stock-vendor.symvers -- drivers/misc/mediatek/sched
+          done
+      - uses: actions/upload-artifact@v4
+        with:
+          name: s50-modules-and-logs
+          path: |
+            ~/w/out/gki/logs
+            ~/w/out/gki/vmlinux.symvers
+            ~/w/out/mtk-*/ko
+            ~/w/out/mtk-*/logs
