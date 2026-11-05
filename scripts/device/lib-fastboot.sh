@@ -6,7 +6,7 @@
 # (slot-successful:_a): отрезается самый короткий префикс до ": ".
 gv() { local l; l=$("$FASTBOOT" getvar "$1" 2>&1 | tr -d '\r' | grep -F -- "$1: " | head -n1); printf '%s' "${l#*: }"; }
 
-fb_count() { "$FASTBOOT" devices | awk '$2=="fastboot"' | wc -l; }
+fb_count() { "$FASTBOOT" devices | awk '$2=="fastboot" || $2=="fastbootd"' | wc -l; }
 
 # wait_fb yes|no — ждать (до 3 мин) одно устройство fastboot в режиме
 # fastbootd (yes) или загрузчика (no).

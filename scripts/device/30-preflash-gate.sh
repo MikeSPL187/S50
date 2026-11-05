@@ -99,6 +99,12 @@ b=$(build_of_running_bootloader)
 [[ "$b" == "$EXP_BUILD_ID" ]] && ok "загрузчик слота A — сборка $EXP_BUILD_ID ($(gvm version-bootloader))" \
   || bad "version-bootloader → '$b' (ожидается $EXP_BUILD_ID; сырое значение: '$(gvm version-bootloader)')"
 fp=$(gvm ro.build.fingerprint)
+# Motorola Fastboot может добавлять служебное Done в конец значения.
+# Удаляем его ТОЛЬКО при точном совпадении с ожидаемым fingerprint + Done.
+if [[ "$fp" == "${EXP_FINGERPRINT}Done" ]]; then
+  fp="${fp%Done}"
+  inf "fingerprint: служебный суффикс Done обработан"
+fi
 if [[ -n "$fp" ]]; then
   [[ "$fp" == "$EXP_FINGERPRINT" ]] && ok "fastboot ro.build.fingerprint стоковый" || bad "fastboot ro.build.fingerprint='$fp'"
 else
